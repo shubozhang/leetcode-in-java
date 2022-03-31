@@ -10,6 +10,12 @@ repositories {
     mavenCentral()
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
 dependencies {
     testImplementation("org.spockframework:spock-core:2.1-groovy-3.0")
     testImplementation("org.codehaus.groovy:groovy-all:3.0.10")
