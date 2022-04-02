@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 class T159FindMinimumInRotatedSortedArrayTest extends Specification {
 
-    def "find minimu in rotated sorted array"() {
+    def "find minimum in rotated sorted array without duplicates"() {
 
         expect:
         T159FindMinimumInRotatedSortedArray.find(arr as int[]) == result
