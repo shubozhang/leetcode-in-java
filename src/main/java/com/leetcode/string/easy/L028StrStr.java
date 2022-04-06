@@ -1,41 +1,37 @@
 package com.leetcode.string.easy;
 
+
 /**
- * Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
  * @author shubozhang
  */
 public class L028StrStr {
-
-
     /**
-     *
-     * @param haystack
-     * @param needle
-     * @return
+     * @param sourceStr
+     * @param subStr
+     * @return the index of the first occurrence of subStr in sourceStr, or -1 if subStr is not part of sourceStr.
      */
-    public int strStr01(String haystack, String needle) {
-        if (null == haystack || null == needle) {
+    public static int strStr(String sourceStr, String subStr) {
+        if (null == sourceStr || null == subStr) {
             return -1;
         }
-        if (needle.equals(haystack) || "".equals(needle)) {
+        if (subStr.equals(sourceStr) || "".equals(subStr)) {
             return 0;
         }
 
-        int hLen = haystack.length();
-        int nLen = needle.length();
+        int sourceLen = sourceStr.length();
+        int subLen = subStr.length();
 
-        if (nLen > hLen) {
+        if (subLen > sourceLen) {
             return -1;
         }
 
-        for (int i = 0; i < hLen; i++) {
-            if (haystack.charAt(i) == needle.charAt(0) && (i + nLen <= hLen)) {
-                if (haystack.substring(i, (i + nLen)). equals(needle)) {
+        for (int i = 0; i < sourceLen; i++) {
+            if (sourceStr.charAt(i) == subStr.charAt(0) && (i + subLen <= sourceLen)) {
+                if (sourceStr.substring(i, (i + subLen)).equals(subStr)) {
                     return i;
                 }
             }
         }
-
         return -1;
     }
 }

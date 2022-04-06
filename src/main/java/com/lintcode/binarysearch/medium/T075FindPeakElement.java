@@ -1,8 +1,8 @@
-package com.leetcode;
+package com.lintcode.binarysearch.medium;
 
 /**
- Description
- There is an integer array which has the following features:
+Description
+There is an integer array which has the following features:
 
 The numbers in adjacent positions are different.
 A[0] < A[1] && A[A.length - 2] > A[A.length - 1].
@@ -27,6 +27,11 @@ Explanation: return the index of peek.
 Challenge
 Time complexity O(logN)O(logN): binary search
 
+ Analysis:
+ 1. brute force: O(n)
+ 2. binary search O(log(n))
+
+
  @author shubozhang
 */
 public class T075FindPeakElement {
@@ -40,8 +45,8 @@ public class T075FindPeakElement {
         int end = A.length - 1;
 
         // each time check three points (mid-1), mid, (mid+1)
-        // if slope > 1, that means the peak is on the right.
-        // if slope < 1, that means the peak is on the left.
+        // if slope > 0, that means the peak is on the right.
+        // if slope < 0, that means the peak is on the left.
         while (start + 2 <= end) {
             int mid = start + (end - start) / 2;
             if (A[mid - 1] < A[mid] && A[mid] > A[mid + 1]) {

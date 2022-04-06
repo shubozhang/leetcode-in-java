@@ -112,3 +112,19 @@ Space complexity represents the amount of memory one program uses in order to ac
 When to use binary search (`O(log(n))`):
 * sorted array
 * find a better performance than `O(n)`
+
+
+## Binary Tree
+* BFS in Binary Tree
+* Binary Searh Tree
+  * Insert / Remove / Find / Validate
+
+* Traverse a tree by order: 
+  * Preorder: root -> left -> right
+  * Inorder: left -> root -> right
+  * Postorder: left -> right -> root
+
+* Traverse a try by algorithms
+  * Non-recursion 
+  * Traverse (recursion)
+  * Divide Conquer (recursion)

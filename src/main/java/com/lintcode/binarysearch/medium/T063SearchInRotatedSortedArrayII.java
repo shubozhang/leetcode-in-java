@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.lintcode.binarysearch.medium;
 
 /**
  This question is similar to T062. The only difference is sorted array with duplicates.

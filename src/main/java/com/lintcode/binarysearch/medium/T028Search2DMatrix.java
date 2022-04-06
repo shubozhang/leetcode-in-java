@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.lintcode.binarysearch.medium;
 
 /**
  * Write an efficient algorithm that searches for a value in an m x n matrix.

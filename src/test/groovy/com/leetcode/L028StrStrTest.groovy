@@ -1,5 +1,6 @@
 package com.leetcode
 
+import com.leetcode.string.easy.L028StrStr
 import spock.lang.Specification
 
 class L028StrStrTest extends Specification {

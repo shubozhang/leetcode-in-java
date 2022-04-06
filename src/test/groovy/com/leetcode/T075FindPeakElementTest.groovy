@@ -1,5 +1,6 @@
 package com.leetcode
 
+import com.lintcode.binarysearch.medium.T075FindPeakElement
 import spock.lang.Specification
 
 class T075FindPeakElementTest extends Specification {

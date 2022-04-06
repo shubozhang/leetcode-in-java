@@ -1,5 +1,6 @@
 package com.leetcode
 
+import com.lintcode.binarysearch.easy.T060SearchInsertPosition
 import spock.lang.Specification
 
 class T060SearchInsertPositionTest extends Specification {

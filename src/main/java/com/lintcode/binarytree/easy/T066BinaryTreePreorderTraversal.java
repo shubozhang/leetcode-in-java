@@ -16,20 +16,12 @@ import java.util.Stack;
  * in-order B A C
  * post-order B C A
  *
- *
- * *    1
- *    / \
- *   2   3
- *  / \
- * 4   5
- * */
+ * @author shubozhang
+ */
 public class T066BinaryTreePreorderTraversal {
 
-
-    /*
-    * Version A: Non-Recursion (Recommended)
-    * */
-    public List<Integer> preorderTraversalA(TreeNode root) {
+     // Version A: Non-Recursion (Recommended)
+    public static List<Integer> preorderTraversalA(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> preorder = new ArrayList<>();
 
@@ -54,17 +46,15 @@ public class T066BinaryTreePreorderTraversal {
     }
 
 
-    /*
-    * Version B: Traversal
-    * */
-    public ArrayList<Integer> preorderTraversalB(TreeNode root) {
+    // Version B: Traversal
+    public static List<Integer> preorderTraversalB(TreeNode root) {
 
-        ArrayList<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
         traversal(root, result);
         return result;
     }
 
-    private void traversal(TreeNode root, ArrayList<Integer> result) {
+    private static void traversal(TreeNode root, List<Integer> result) {
         if (root == null) {
             return;
         }
@@ -74,12 +64,12 @@ public class T066BinaryTreePreorderTraversal {
     }
 
     /*
-    * Version C: Divide and Conquer
-    * This version can be used in multithreading scenario, but Version B can't.
-    * */
+     * Version C: Divide and Conquer
+     * This version can be used in multithreading scenario, but Version B can't.
+     * */
 
-    public ArrayList<Integer> preorderTraversalC(TreeNode root) {
-        ArrayList<Integer> result = new ArrayList<>();
+    public static List<Integer> preorderTraversalC(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
 
         // null or leaf
         if (root == null) {
@@ -87,8 +77,10 @@ public class T066BinaryTreePreorderTraversal {
         }
 
         // Divide
-        ArrayList<Integer> left = preorderTraversalC(root.left); // Can be calculated in Thread A
-        ArrayList<Integer> right = preorderTraversalC(root.right); // Can be calculated in Thread B
+        // Can be calculated in Thread A
+        List<Integer> left = preorderTraversalC(root.left);
+        // Can be calculated in Thread B
+        List<Integer> right = preorderTraversalC(root.right);
 
         // Conquer
         result.add(root.val);

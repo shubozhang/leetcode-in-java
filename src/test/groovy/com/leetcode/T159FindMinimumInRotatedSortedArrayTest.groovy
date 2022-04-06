@@ -1,5 +1,6 @@
 package com.leetcode
 
+import com.lintcode.binarysearch.medium.T159FindMinimumInRotatedSortedArray
 import spock.lang.Specification
 
 class T159FindMinimumInRotatedSortedArrayTest extends Specification {

@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.binarysearch.medium;
 
 /**
  Write an efficient algorithm that searches for a value target in an m x n integer matrix.

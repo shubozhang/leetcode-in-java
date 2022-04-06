@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.lintcode.binarysearch.easy;
 
 /**
  * For a given sorted array (ascending order) and a target number,

@@ -17,6 +17,7 @@ import com.model.TreeNode;
  *      /  \                / \
  *     15   7              15  7
  * The binary tree A is a height-balanced binary tree, but B is not.
+ * @author shubozhang
  */
 public class T093BalancedBinaryTree {
 

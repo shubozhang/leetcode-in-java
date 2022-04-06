@@ -1,5 +1,6 @@
 package com.leetcode
 
+import com.lintcode.binarysearch.medium.T028Search2DMatrix
 import spock.lang.Specification
 
 class T028Search2DMatrixTest extends Specification {

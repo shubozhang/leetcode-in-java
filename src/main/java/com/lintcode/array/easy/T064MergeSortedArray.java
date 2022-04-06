@@ -11,6 +11,7 @@ package com.lintcode.array.easy;
  * After merge, A will be filled as [1, 2, 3, 4, 5]
  *
  * Tip: compare the elements from end.
+ * @author shubozhang
  */
 public class T064MergeSortedArray {
 }

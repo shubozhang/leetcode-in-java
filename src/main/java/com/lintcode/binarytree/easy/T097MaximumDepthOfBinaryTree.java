@@ -3,7 +3,8 @@ package com.lintcode.binarytree.easy;
 import com.model.TreeNode;
 
 /**
- * Created by Shubo on 9/3/2016.
+ *
+ * @author Shubo
  */
 public class T097MaximumDepthOfBinaryTree {
 

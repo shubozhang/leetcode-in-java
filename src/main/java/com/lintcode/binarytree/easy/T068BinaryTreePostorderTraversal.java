@@ -5,7 +5,8 @@ import com.model.TreeNode;
 import java.util.ArrayList;
 
 /**
- * Created by Shubo on 9/3/2016.
+ *
+ * @author Shubo
  */
 public class T068BinaryTreePostorderTraversal {
 
