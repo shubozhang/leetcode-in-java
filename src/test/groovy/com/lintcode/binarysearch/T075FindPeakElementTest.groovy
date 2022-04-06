@@ -1,4 +1,4 @@
-package com.leetcode
+package com.lintcode.binarysearch
 
 import com.lintcode.binarysearch.medium.T075FindPeakElement
 import spock.lang.Specification

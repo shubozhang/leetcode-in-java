@@ -1,4 +1,4 @@
-package com.leetcode
+package com.lintcode.binarysearch
 
 import com.lintcode.binarysearch.easy.T060SearchInsertPosition
 import spock.lang.Specification

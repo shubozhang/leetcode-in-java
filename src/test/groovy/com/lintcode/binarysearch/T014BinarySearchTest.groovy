@@ -1,4 +1,4 @@
-package com.leetcode
+package com.lintcode.binarysearch
 
 import com.lintcode.binarysearch.easy.T014BinarySearch
 import spock.lang.Specification
