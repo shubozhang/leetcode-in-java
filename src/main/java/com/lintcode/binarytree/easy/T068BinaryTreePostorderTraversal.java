@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class T068BinaryTreePostorderTraversal {
 
 
-    public ArrayList<Integer> postorderTraversal(TreeNode root) {
+    public static ArrayList<Integer> postorderTraversal(TreeNode root) {
 
         ArrayList<Integer> result = new ArrayList<>();
 

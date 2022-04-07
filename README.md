@@ -128,3 +128,7 @@ When to use binary search (`O(log(n))`):
   * Non-recursion 
   * Traverse (recursion)
   * Divide Conquer (recursion)
+
+1. Define recursive 
+2. Define exit
+3. Convert it small chunk of problem

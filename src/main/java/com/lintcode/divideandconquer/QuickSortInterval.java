@@ -4,7 +4,9 @@ import com.model.Interval;
 import java.util.List;
 
 /**
- * Created by shubo.zhang on 9/23/2016.
+ *
+ * @author shubo.zhang
+ * @date 9/23/2016
  */
 public class QuickSortInterval {
 

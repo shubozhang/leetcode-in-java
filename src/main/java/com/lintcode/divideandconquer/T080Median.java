@@ -1,7 +1,9 @@
 package com.lintcode.divideandconquer;
 
 /**
- * Created by Shubo on 9/20/2016.
+ *
+ * @author Shubo
+ * @date 9/20/2016
  */
 public class T080Median {
 

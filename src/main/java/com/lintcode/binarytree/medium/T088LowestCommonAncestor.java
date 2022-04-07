@@ -2,7 +2,9 @@ package com.lintcode.binarytree.medium;
 
 
 /**
- * Created by Shubo on 9/4/2016.
+ *
+ * @author Shubo
+ * @date 9/4/2016
  */
 public class T088LowestCommonAncestor {
 

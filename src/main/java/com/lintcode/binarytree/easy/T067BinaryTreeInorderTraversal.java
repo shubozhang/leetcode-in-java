@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class T067BinaryTreeInorderTraversal {
 
 
-    public ArrayList<Integer> inorderTraversal(TreeNode root) {
+    public static ArrayList<Integer> inorderTraversal(TreeNode root) {
         // write your code here
         ArrayList<Integer> result = new ArrayList<>();
 

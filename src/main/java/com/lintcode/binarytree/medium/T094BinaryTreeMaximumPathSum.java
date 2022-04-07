@@ -11,6 +11,7 @@ import com.model.TreeNode;
   *  / \
   * 2   3
   * return 6.
+ * @author shubozhang
  */
 public class T094BinaryTreeMaximumPathSum {
 

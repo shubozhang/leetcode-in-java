@@ -17,6 +17,7 @@ package com.lintcode.binarytree.medium;
  *    / \
  *   3   5
  * The above binary tree is serialized as {2,1,4,#,#,3,5} (in level order).
+ * @author shubozhang
  */
 public class T095ValidateBinarySearchTree {
 }

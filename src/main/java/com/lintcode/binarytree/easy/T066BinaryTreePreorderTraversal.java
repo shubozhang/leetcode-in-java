@@ -12,9 +12,9 @@ import java.util.Stack;
  *  / \
  * 4   5
  *
- * pre-order A B C
- * in-order B A C
- * post-order B C A
+ * pre-order: A -> B -> 4 -> 5 -> C
+ * in-order 4 -> B -> A -> C -> 5
+ * post-order 4 -> 5 -> B -> C -> A
  *
  * @author shubozhang
  */
@@ -63,11 +63,9 @@ public class T066BinaryTreePreorderTraversal {
         traversal(root.right, result);
     }
 
-    /*
-     * Version C: Divide and Conquer
-     * This version can be used in multithreading scenario, but Version B can't.
-     * */
 
+    // Version C: Divide and Conquer
+    // This version can be used in multithreading scenario, but Version B can't.
     public static List<Integer> preorderTraversalC(TreeNode root) {
         List<Integer> result = new ArrayList<>();
 
