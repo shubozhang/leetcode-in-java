@@ -6,15 +6,15 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- *     A
+ *     1
  *    / \
- *   B   C
+ *   2   3
  *  / \
  * 4   5
  *
- * pre-order: A -> B -> 4 -> 5 -> C
- * in-order 4 -> B -> A -> C -> 5
- * post-order 4 -> 5 -> B -> C -> A
+ * pre-order (root -> left -> right): 1 -> 2 -> 4 -> 5 -> 3
+ * in-order (left -> root -> right): 4 -> 2 -> 5 -> 1 -> 3
+ * post-order (left -> right -> root): 4 -> 5 -> 2 -> 3 -> 1
  *
  * @author shubozhang
  */
@@ -48,7 +48,6 @@ public class T066BinaryTreePreorderTraversal {
 
     // Version B: Traversal
     public static List<Integer> preorderTraversalB(TreeNode root) {
-
         List<Integer> result = new ArrayList<>();
         traversal(root, result);
         return result;
