@@ -57,4 +57,37 @@ public class T116JumpGame {
         }
         return f[n - 1];
     }
+
+    // nine chapter solution
+    public static boolean canJumpB(int[] A){
+        boolean[] can = new boolean[A.length];
+        can[0] = true;
+
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if(can[j] && j + A[j] >= i) {
+                    can[i] = true;
+                    break;
+                }
+            }
+        }
+        return can[A.length - 1];
+    }
+
+    // greedy (not recommended)
+
+    public static boolean canJumpC(int[] A) {
+        // think it as merging n intervals
+        if (A == null || A.length == 0) {
+            return false;
+        }
+
+        int farthest = A[0];
+        for (int i = 1; i < A.length; i++) {
+            if (i <= farthest && A[i] + i >= farthest) {
+                farthest = A[i] + i;
+            }
+        }
+        return farthest >= A.length - 1;
+    }
 }
