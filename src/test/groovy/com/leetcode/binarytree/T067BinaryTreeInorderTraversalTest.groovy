@@ -3,6 +3,7 @@ package com.leetcode.binarytree
 import com.leetcode.binarytree.easy.T067BinaryTreeInorderTraversal
 import com.model.TreeNode
 import org.junit.Before
+import org.junit.jupiter.api.BeforeEach
 import spock.lang.Specification
 
 class T067BinaryTreeInorderTraversalTest extends Specification {

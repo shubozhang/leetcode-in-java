@@ -52,9 +52,9 @@ public class T067BinaryTreeInorderTraversal {
         if (node == null) {
             return;
         }
-        result.add(node.left.val);
+        inorderHelper(node.left, result);
         result.add(node.val);
-        result.add(node.right.val);
+        inorderHelper(node.right, result);
     }
 
     public static List<Integer> inorderTraversalC(TreeNode root) {

@@ -1,6 +1,5 @@
 package com.leetcode.binarysearch.easy
 
-import com.lintcode.binarysearch.easy.T014BinarySearch
 import spock.lang.Specification
 
 class L704BinarySearchTest extends Specification {
