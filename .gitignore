@@ -3,6 +3,7 @@
 *.iml
 .gradle
 build
+books
 
 # Compiled class file
 *.class
