@@ -1,4 +1,4 @@
-package com.lintcode.dynamicprogramming.medium;
+package com.leetcode.dynamicprogramming.medium;
 
 /**
  * Description
@@ -16,7 +16,7 @@ package com.lintcode.dynamicprogramming.medium;
  * Output: 12
  * Explanation: The minimum path sum from top to bottom is 12 (2 + 2 + 7 + 1 = 12).
  */
-public class T109Triangle {
+public class L120Triangle {
 
     // version 0: top-down
     /**

@@ -1,4 +1,4 @@
-package com.lintcode.dynamicprogramming.medium;
+package com.leetcode.dynamicprogramming.medium;
 
 /**
  Description
@@ -16,7 +16,7 @@ package com.lintcode.dynamicprogramming.medium;
  Explanation: The minimum number of jumps to reach the last index is 2.
  (Jump 1 step from index 0 to 1, then 3 steps to the last index.)
  * */
-public class T117JumpGameII {
+public class L045JumpGameII {
 
     private static final int MAX_N = 30_000;
 

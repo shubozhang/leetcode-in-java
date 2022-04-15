@@ -1,4 +1,4 @@
-package com.lintcode.dynamicprogramming.easy;
+package com.leetcode.dynamicprogramming.medium;
 
 
 /**
@@ -30,7 +30,7 @@ package com.lintcode.dynamicprogramming.easy;
  RDDR
 
  * */
-public class T114UniquePaths {
+public class L062UniquePaths {
     /**
      * @param m: positive integer (1 <= m <= 100)
      * @param n: positive integer (1 <= n <= 100)

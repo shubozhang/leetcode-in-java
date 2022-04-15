@@ -1,4 +1,4 @@
-package com.lintcode.dynamicprogramming.easy;
+package com.leetcode.dynamicprogramming.easy;
 
 /**
  Description
@@ -19,7 +19,7 @@ package com.lintcode.dynamicprogramming.easy;
  Output: 1
  Explanation: only 1 way.
  * */
-public class T111ClimbingStairs {
+public class L070ClimbingStairs {
     // works like fibonacci
 
     // non-recursive

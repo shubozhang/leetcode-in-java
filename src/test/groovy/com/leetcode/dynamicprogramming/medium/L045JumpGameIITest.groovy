@@ -1,11 +1,12 @@
-package com.lintcode.dynamicprogramming.medium
+package com.leetcode.dynamicprogramming.medium
 
+import com.leetcode.dynamicprogramming.medium.L045JumpGameII
 import spock.lang.Specification
 
-class T117JumpGameIITest extends Specification {
+class L045JumpGameIITest extends Specification {
     def "jump game II"() {
         expect:
-        T117JumpGameII.calculateStepsA(A as int[]) == res
+        L045JumpGameII.calculateStepsA(A as int[]) == res
 
         where:
         A                                    || res

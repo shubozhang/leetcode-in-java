@@ -1,12 +1,13 @@
-package com.lintcode.dynamicprogramming.easy
+package com.leetcode.dynamicprogramming.easy
 
+import com.leetcode.dynamicprogramming.easy.L070ClimbingStairs
 import spock.lang.Specification
 
-class T111ClimbingStairsTest extends Specification {
+class L070ClimbingStairsTest extends Specification {
 
     def "climbing stairs in non-recursive way"() {
         expect:
-        T111ClimbingStairs.searchA(n) == res
+        L070ClimbingStairs.searchA(n) == res
 
         where:
         n || res
@@ -16,7 +17,7 @@ class T111ClimbingStairsTest extends Specification {
 
     def "climbing stairs in recursive way"() {
         expect:
-        T111ClimbingStairs.searchB(n) == res
+        L070ClimbingStairs.searchB(n) == res
 
         where:
         n || res

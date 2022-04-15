@@ -1,7 +1,4 @@
-package com.lintcode.dynamicprogramming.easy;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.leetcode.dynamicprogramming.easy;
 
 /**
  Description
@@ -22,7 +19,7 @@ import java.util.List;
 
  *
  * */
-public class T110MinimumPathSum {
+public class L064MinimumPathSum {
     // res.size() = m + n -1;
     public static int search(int[][] grid){
         if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0){

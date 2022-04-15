@@ -1,4 +1,4 @@
-package com.lintcode.dynamicprogramming.medium;
+package com.leetcode.dynamicprogramming.medium;
 
 /**
  * Description
@@ -27,7 +27,7 @@ package com.lintcode.dynamicprogramming.medium;
  * This is just to let you learn how to use this problem in dynamic programming ways.
  * If you finish it in dynamic programming ways, you can try greedy method to make it accept again.
  */
-public class T116JumpGame {
+public class L055JumpGame {
 
 //    state: f[i]代表我能否跳到第i个位置
 //    function: f[i] = OR(f[j], j < i && j能够跳到i)

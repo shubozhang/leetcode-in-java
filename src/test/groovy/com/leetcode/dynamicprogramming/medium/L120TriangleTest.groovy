@@ -1,12 +1,13 @@
-package com.lintcode.dynamicprogramming.medium
+package com.leetcode.dynamicprogramming.medium
 
+import com.leetcode.dynamicprogramming.medium.L120Triangle
 import spock.lang.Specification
 
-class T109TriangleTest extends Specification {
+class L120TriangleTest extends Specification {
 
     def "triangle A"() {
         expect:
-        T109Triangle.minimumTotalA(triangle as int[][]) == sum
+        L120Triangle.minimumTotalA(triangle as int[][]) == sum
 
         where:
         triangle                              || sum
@@ -17,7 +18,7 @@ class T109TriangleTest extends Specification {
 
     def "triangle B"() {
         expect:
-        T109Triangle.minimumTotalB(triangle as int[][]) == sum
+        L120Triangle.minimumTotalB(triangle as int[][]) == sum
 
         where:
         triangle                              || sum
@@ -28,7 +29,7 @@ class T109TriangleTest extends Specification {
 
     def "triangle C"() {
         expect:
-        new T109Triangle().minimumTotalC(triangle as int[][]) == sum
+        new L120Triangle().minimumTotalC(triangle as int[][]) == sum
 
         where:
         triangle                              || sum

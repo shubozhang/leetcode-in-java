@@ -1,12 +1,13 @@
-package com.lintcode.dynamicprogramming.easy
+package com.leetcode.dynamicprogramming.easy
 
+import com.leetcode.dynamicprogramming.easy.L064MinimumPathSum
 import spock.lang.Specification
 
-class T110MinimumPathSumTest extends Specification {
+class L064MinimumPathSumTest extends Specification {
 
     def "minimum path sum"() {
         expect:
-        T110MinimumPathSum.search(grid as int[][]) == res
+        L064MinimumPathSum.search(grid as int[][]) == res
 
         where:
         grid                              || res

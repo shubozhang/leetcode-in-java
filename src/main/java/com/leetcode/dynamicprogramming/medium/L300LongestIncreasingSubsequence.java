@@ -1,4 +1,4 @@
-package com.lintcode.dynamicprogramming.medium;
+package com.leetcode.dynamicprogramming.medium;
 
 /**
  Description
@@ -25,7 +25,7 @@ package com.lintcode.dynamicprogramming.medium;
  Challenge
  Time complexity O(n^2) or O(nlogn)
  * */
-public class T076LongestIncreasingSubsequence {
+public class L300LongestIncreasingSubsequence {
 
     // state: f[i] is the length of the LIS at index_i
     // func: f[i] = A[i] >= A[j] && max{f[i], f[j] + 1}
@@ -39,7 +39,7 @@ public class T076LongestIncreasingSubsequence {
             // LIS start point might be any index, so f[start] init value is 1
             f[i] =1;
             for (int j = 0; j < i; j++) {
-                if(A[j] <= A[i]){
+                if(A[j] < A[i]){
                     f[i] = Math.max(f[i], f[j] + 1);
                 }
             }
