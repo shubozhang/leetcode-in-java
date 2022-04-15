@@ -1,32 +1,42 @@
 package com.leetcode.binarysearch.easy;
 
+
+/**
+ * For a given sorted array (ascending order) and a target number,
+ * find the first index of this number in O(log n) time complexity.
+ * If the target number does not exist in the array, return -1.
+ * <p>
+ * Example
+ * If the array is [1, 2, 3, 3, 4, 5, 10], for given target 3, return 2.
+ *
+ * @author shubozhang
+ */
 public class L704BinarySearch {
 
-    public int search(int[] nums, int target) {
-        if (nums == null || nums.length == 0){
+    public static int search(int[] arr, int target) {
+        if (arr.length == 0) {
             return -1;
         }
 
-        int start = 0;
-        int end = nums.length - 1;
-
-        while (start + 1 < end) {
-            int mid = start + (end -start) / 2;
-            if (nums[mid] == target) {
-                return mid;
-            } else if (nums[mid] < target) {
-                start = mid;
-            } else {
-                end = mid;
+        int lo = 0;
+        int hi = arr.length - 1;
+        int mid;
+        while (lo + 1 < hi) {
+            // avoid mid exceeding the max of int
+            mid = (hi - lo) / 2 + lo;
+            if (arr[mid] == target) {
+                hi = mid;
+            } else if (arr[mid] < target) {
+                lo = mid;
+            } else if (arr[mid] > target) {
+                hi = mid;
             }
         }
-
-        if (nums[start] == target) {
-            return start;
+        if (arr[lo] == target) {
+            return lo;
         }
-
-        if (nums[end] == target) {
-            return end;
+        if (arr[hi] == target) {
+            return hi;
         }
 
         return -1;

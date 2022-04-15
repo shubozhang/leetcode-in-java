@@ -27,6 +27,7 @@ package com.leetcode.binarysearch.easy;
  * @author shubozhang
  */
 public class L035SearchInsertPosition {
+
     public static int searchInsert(int[] nums, int target) {
 
         int start = 0;
@@ -48,6 +49,37 @@ public class L035SearchInsertPosition {
             return end;
         } else {
             return end + 1;
+        }
+    }
+
+    public static int getPosition(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+            return 0;
+        }
+
+        int lo = 0;
+        int hi = arr.length - 1;
+        while (lo + 1 < hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (arr[mid] == target) {
+                hi = mid;
+            } else if (arr[mid] < target) {
+                lo = mid;
+            } else {
+                hi = mid;
+            }
+        }
+
+        if (arr[lo] > target) {
+            return lo > 0 ? lo - 1 : 0;
+        } else if (arr[lo] == target) {
+            return lo;
+        } else if (arr[lo] < target && target < arr[hi]) {
+            return lo + 1;
+        } else if (arr[hi] == target) {
+            return hi;
+        } else {
+            return hi + 1;
         }
     }
 }
