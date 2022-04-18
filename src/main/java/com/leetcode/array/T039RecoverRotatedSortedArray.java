@@ -1,4 +1,4 @@
-package com.leetcode.array.easy;
+package com.leetcode.array;
 
 /**
  * Given a rotated sorted array, recover it to sorted array in-place.

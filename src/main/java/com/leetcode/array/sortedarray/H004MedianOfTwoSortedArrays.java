@@ -1,20 +1,31 @@
 package com.leetcode.array.sortedarray;
 
 /**
- There are two sorted arrays A and B of size m and n respectively. Find the median of the two
- sorted arrays.
- Example
- Given A=[1,2,3,4,5,6] and B=[2,3,4,5], the median is 3.5.
- Given A=[1,2,3] and B=[4,5], the median is 3.
- */
-public class H065MedianOfTwoSortedArrays {
+ https://leetcode.com/problems/median-of-two-sorted-arrays/
+ Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of
+ the two sorted arrays.
 
-    public static void main(String[] args) {
-        int[] A = {1,2,3,4,5,6};
-        int[] B = {2,3,4,5};
+ The overall run time complexity should be O(log (m+n)).
 
-        System.out.println(findMedian(A, B));
-    }
+ Example 1:
+ Input: nums1 = [1,3], nums2 = [2]
+ Output: 2.00000
+ Explanation: merged array = [1,2,3] and median is 2.
+
+ Example 2:
+ Input: nums1 = [1,2], nums2 = [3,4]
+ Output: 2.50000
+ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+
+ Constraints:
+ 1) nums1.length == m
+ 2) nums2.length == n
+ 3) 0 <= m <= 1000
+ 4) 0 <= n <= 1000
+ 5) 1 <= m + n <= 2000
+ 6) -106 <= nums1[i], nums2[i] <= 106
+ * */
+public class H004MedianOfTwoSortedArrays {
 
     public static double findMedian(int[] A, int[] B) {
         int len = A.length + B.length;
@@ -48,3 +59,4 @@ public class H065MedianOfTwoSortedArrays {
         }
     }
 }
+

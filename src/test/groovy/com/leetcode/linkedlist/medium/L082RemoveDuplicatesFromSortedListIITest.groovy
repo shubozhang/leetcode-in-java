@@ -37,7 +37,7 @@ class L082RemoveDuplicatesFromSortedListIITest extends Specification {
         ListNode res2 = L082RemoveDuplicatesFromSortedListII.remove(head31)
 
         then:
-        assertTrue(ListNodeUtils.extractListNodeToInt(res1).toArray() as int[] == arr1)
-        assertTrue(ListNodeUtils.extractListNodeToInt(res2).toArray() as int[] == arr2)
+        assertTrue(ListNodeUtils.extractListNodeToInt(res1) == arr1)
+        assertTrue(ListNodeUtils.extractListNodeToInt(res2) == arr2)
     }
 }
