@@ -5,17 +5,11 @@ package com.leetcode.string.easy;
  */
 public class L125Palindrome {
 
-    public static void main(String[] args) {
-        System.out.println(isPalindrome(""));
-        System.out.println(isPalindrome(null));
-        System.out.println(isPalindrome("1a2"));
-        System.out.println(isPalindrome("abc"));
-        System.out.println(isPalindrome("aaa"));
-        System.out.println(isPalindrome("abccba"));
-    }
-
-    private static boolean isPalindrome(String input) {
-        if (null == input || input.length() <= 1) {
+    public static boolean isPalindrome(String input) {
+        if (null == input) {
+            return false;
+        }
+        if (input.length() <= 1) {
             return true;
         }
 

@@ -132,3 +132,9 @@ When to use binary search (`O(log(n))`):
 1. Define recursive 
 2. Define exit
 3. Convert it small chunk of problem
+
+## Linked List
+
+* L092 Reverse Linked List II
+
+![Alt text](images/L092.png?raw=true "Reverse Linked List II")
