@@ -1,4 +1,4 @@
-package com.leetcode.array.hard;
+package com.leetcode.array.sortedarray;
 
 /**
  There are two sorted arrays A and B of size m and n respectively. Find the median of the two
@@ -7,7 +7,7 @@ package com.leetcode.array.hard;
  Given A=[1,2,3,4,5,6] and B=[2,3,4,5], the median is 3.5.
  Given A=[1,2,3] and B=[4,5], the median is 3.
  */
-public class T065MedianOfTwoSortedArrays {
+public class H065MedianOfTwoSortedArrays {
 
     public static void main(String[] args) {
         int[] A = {1,2,3,4,5,6};

@@ -1,4 +1,4 @@
-package com.leetcode.array.easy;
+package com.leetcode.array.sortedarray;
 
 /**
  *
