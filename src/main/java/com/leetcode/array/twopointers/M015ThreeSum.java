@@ -123,7 +123,8 @@ public class M015ThreeSum {
                 List<Integer> t = new ArrayList<>();
                 t.add(A[i]);
                 t.add(A[j]);
-                t.add(-target); // t.add(A[right+1])
+                // t.add(A[right+1])
+                t.add(-target);
                 results.add(t);
             }
         }
