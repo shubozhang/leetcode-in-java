@@ -1,7 +1,5 @@
 package com.leetcode.array.twopointers;
 
-import com.leetcode.array.T057ThreeSum;
-
 import java.util.*;
 
 /**
@@ -37,7 +35,7 @@ import java.util.*;
  * */
 public class M015ThreeSum {
 
-    public static List<List<Integer>> find(int[] nums) {
+    public static List<List<Integer>> versionA(int[] nums) {
         List<List<Integer>> lists = new ArrayList<>();
         if(nums == null || nums.length < 3) {
             return lists;
@@ -81,10 +79,8 @@ public class M015ThreeSum {
         return lists;
     }
 
-    List<List<Integer>> results = new ArrayList<>();
-
-
-    private List<List<Integer>> threeSum(int[] A) {
+    public static List<List<Integer>> results = new ArrayList<>();
+    public static List<List<Integer>> versionB(int[] A) {
         if (A == null || A.length < 3) {
             return results;
         }
@@ -108,7 +104,7 @@ public class M015ThreeSum {
 
     }
 
-    private void twoSum(int[] A, int right, int target) {
+    private static void twoSum(int[] A, int right, int target) {
         int i, j;
         j = right;
         for (i = 0; i <= right; ++i) {
@@ -132,7 +128,7 @@ public class M015ThreeSum {
 
 
     // This is soring results using 1st number as 1st key, 2nd number as 2nd key...
-    class ListComparator<T extends Comparable<T>> implements Comparator<List<Integer>> {
+    static class ListComparator<T extends Comparable<T>> implements Comparator<List<Integer>> {
         @Override
         public int compare(List<Integer> a, List<Integer> b) {
             for (int i = 0; i < Math.min(a.size(), b.size()); i++) {

@@ -138,3 +138,13 @@ When to use binary search (`O(log(n))`):
 * L092 Reverse Linked List II
 
 ![Alt text](images/L092.png?raw=true "Reverse Linked List II")
+
+
+
+## Array
+
+* Four Sum
+sort -> O(n^2) => O(n)
+3sum O(n^3) => O(n^2)
+4sum O(n^4) => O(n^3)
+
