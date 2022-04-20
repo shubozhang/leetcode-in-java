@@ -27,14 +27,14 @@ package com.leetcode.array.twopointers;
  Follow up: Could you come up with a one-pass algorithm using only constant extra space?
 
  Anslysis:
- 1) Rainbow Sort
+ 1) Rainbow Sort (in place swap)
     k different numbers
     O(kn) time + O(1) space
  2) Counting Sort
     O(n) time O(k) space
  * */
 public class M075SortColors {
-    public static int[] sort(int[] nums) {
+    public static int[] sortA(int[] nums) {
         if (nums == null || nums.length == 0) {
             return nums;
         }
@@ -74,5 +74,40 @@ public class M075SortColors {
             }
         }
         return nums;
+    }
+
+
+    /**
+     * Nine chapter solution
+     * @param nums: A list of integer which is 0, 1 or 2
+     * @return: nothing
+     */
+    public static int[] sortB(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
+        int mid = 0;
+
+        //直到mid > right停止遍历
+        while (mid <= right){
+            if (nums[mid] == 0){
+                swap(nums, mid, left);
+                mid ++;
+                left ++;
+            }
+            else if (nums[mid] == 2){
+                swap(nums, mid, right);
+                right --;
+            }
+            else{
+                mid ++;
+            }
+        }
+        return nums;
+    }
+
+    private static void swap(int[] a, int i, int j) {
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
     }
 }
