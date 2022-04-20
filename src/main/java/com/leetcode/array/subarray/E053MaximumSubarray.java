@@ -28,6 +28,8 @@ package com.leetcode.array.subarray;
  divide and conquer approach, which is more subtle.
 
  Same problem: E121BestTimeToBuyAndSellStock
+
+ NOTE: for max sub array between[i, j] is sum[j] - sum[i - 1]
  * */
 public class E053MaximumSubarray {
 
