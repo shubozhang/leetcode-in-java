@@ -79,6 +79,8 @@ public class M015ThreeSum {
         return lists;
     }
 
+
+    // version B:
     public static List<List<Integer>> results = new ArrayList<>();
     public static List<List<Integer>> versionB(int[] A) {
         if (A == null || A.length < 3) {

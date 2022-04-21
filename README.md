@@ -148,3 +148,51 @@ sort -> O(n^2) => O(n)
 3sum O(n^3) => O(n^2)
 4sum O(n^4) => O(n^3)
 
+
+## Data Structure
+
+Queue
+Operations
+● O(1) Push
+● O(1) Pop
+● O(1) Top
+Core data structure for BFS!
+
+
+Stack
+Operations:
+● O(1) Push
+● O(1) Pop
+● O(1) Top
+
+// ascending / descending stack
+O(n^2) => O(N)
+
+DP: O(2^n) => O(n^2)
+O(nlogn):
+1. sorting and then binary search
+2. use a O(logn) data structure: like heap / priority queue
+
+Hash
+Operations
+● O(1) Insert
+● O(1) Delete
+● O(1) Find
+Hash Function Collision
+● Open Hashing (LinkedList)
+● Closed Hashing (ArrayList)
+
+
+Java
+● HashTable ● HashSet
+● HashMap
+Which on is Thread Safe?
+
+
+
+Heap
+Operations
+● O(log N) Add
+● O(log N) Remove
+● O(1) Min/Max
+

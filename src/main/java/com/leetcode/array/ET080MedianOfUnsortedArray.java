@@ -31,7 +31,6 @@ public class ET080MedianOfUnsortedArray {
      * @return: An integer denotes the middle number of the array
      */
     public static int median(int[] nums) {
-        // write your code here
         if (nums == null || nums.length == 0) {
             return -1;
         }

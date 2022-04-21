@@ -22,7 +22,8 @@ public class L090UniqueSubset {
      */
     public static List<List<Integer>> subsetsB(int[] source) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
-        Arrays.sort(source); // unnecessary
+        // unnecessary
+        Arrays.sort(source);
         subsetsB(source, 0, new ArrayList<>(), res);
         return res;
     }
