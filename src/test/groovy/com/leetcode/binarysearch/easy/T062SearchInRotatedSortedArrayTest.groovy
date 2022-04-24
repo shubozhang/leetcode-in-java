@@ -1,6 +1,6 @@
 package com.leetcode.binarysearch.easy
 
-import com.leetcode.binarysearch.medium.T062SearchInRotatedSortedArray
+
 import spock.lang.Specification
 
 class T062SearchInRotatedSortedArrayTest extends Specification {
