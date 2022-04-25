@@ -33,7 +33,7 @@ public class E1539KthMissingPositiveNumber {
         int start = 0, N = arr.length, end = N-1;
         while(start <= end){
             int mid = start + (end - start) / 2;
-            if(arr[mid] - mid - 1 < k){
+            if(arr[mid] - mid < k){
                 start = mid + 1;
             }else {
                 end = mid - 1;
