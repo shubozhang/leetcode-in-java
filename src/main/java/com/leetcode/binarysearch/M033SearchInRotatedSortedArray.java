@@ -1,4 +1,4 @@
-package com.leetcode.binarysearch.easy;
+package com.leetcode.binarysearch;
 
 /**
  * Description
@@ -28,7 +28,7 @@ package com.leetcode.binarysearch.easy;
  *
  * @author shubozhang
  */
-public class T062SearchInRotatedSortedArray {
+public class M033SearchInRotatedSortedArray {
 
     public static int search(int[] nums, int target) {
         if (nums == null || nums.length == 0) {

@@ -36,7 +36,6 @@ public class E1351CountNegativeNumbersInASortedMatrix {
             int index = binarySearch(ints);
             if (index != -1) {
                 count += (col - index);
-                System.out.println(col - index);
             }
         }
         return count;

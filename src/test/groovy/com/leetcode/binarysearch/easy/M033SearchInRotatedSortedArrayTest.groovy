@@ -1,13 +1,13 @@
 package com.leetcode.binarysearch.easy
 
-
+import com.leetcode.binarysearch.M033SearchInRotatedSortedArray
 import spock.lang.Specification
 
-class T062SearchInRotatedSortedArrayTest extends Specification {
+class M033SearchInRotatedSortedArrayTest extends Specification {
 
     def "search in rotated sorted array without dup"() {
         expect:
-        T062SearchInRotatedSortedArray.search(nums as int[], target) == index
+        M033SearchInRotatedSortedArray.search(nums as int[], target) == index
 
         where:
         nums            | target || index
