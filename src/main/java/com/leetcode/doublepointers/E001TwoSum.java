@@ -37,6 +37,7 @@ import java.util.Map;
 * */
 public class E001TwoSum {
 
+    // extra space O(1)
     public static int[] twoPointers(int[] nums, int target) {
         if (nums == null || nums.length < 2) {
             return null;

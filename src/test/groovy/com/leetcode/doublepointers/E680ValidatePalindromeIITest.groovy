@@ -2,11 +2,11 @@ package com.leetcode.doublepointers
 
 import spock.lang.Specification
 
-class E680ValidPalindromeIITest extends Specification {
+class E680ValidatePalindromeIITest extends Specification {
 
     def "validate palindrome II"() {
         expect:
-        E680ValidPalindromeII.checkA(str) == res
+        E680ValidatePalindromeII.checkA(str) == res
 
         where:
         str                     || res

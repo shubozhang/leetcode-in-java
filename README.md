@@ -159,9 +159,9 @@ Space complexity represents the amount of memory one program uses in order to ac
 
 ### 相向双指针的分类
 * Reverse 型
-  * 翻转字符串
+  * [Reverse String](/src/main/java/com/leetcode/doublepointers/E344ReverseString.java)
   * [Valid Palindrome](/src/main/java/com/leetcode/doublepointers/E125ValidatePalindrome.java)
-  * [Valid Palindrome II](/src/main/java/com/leetcode/doublepointers/E680ValidPalindromeII.java)
+  * [Valid Palindrome II](/src/main/java/com/leetcode/doublepointers/E680ValidatePalindromeII.java)
 
 * Two Sum 型
   * [Two Sum](/src/main/java/com/leetcode/doublepointers/E001TwoSum.java)

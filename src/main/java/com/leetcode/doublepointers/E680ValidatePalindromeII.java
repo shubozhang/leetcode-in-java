@@ -23,7 +23,7 @@ package com.leetcode.doublepointers;
  1) 1 <= s.length <= 105
  2) s consists of lowercase English letters.
  * */
-public class E680ValidPalindromeII {
+public class E680ValidatePalindromeII {
 
     public static boolean checkA(String str){
         if (null == str) {
