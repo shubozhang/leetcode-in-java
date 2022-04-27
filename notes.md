@@ -64,12 +64,8 @@
 
 Example:  
 * [Valid Palindrome](/src/main/java/com/leetcode/doublepointers/E125ValidatePalindrome.java)
-
-* Valid Palindrome II
-https://www.lintcode.com/problem/valid-palindrome-ii/
-
-* Two Sum
-https://www.lintcode.com/problem/two-sum/
+* [Valid Palindrome II](/src/main/java/com/leetcode/doublepointers/E680ValidPalindromeII)
+* [Two Sum](/src/main/java/com/leetcode/doublepointers/E001TwoSum)
 
 
 * 哈希表的实现方法 
