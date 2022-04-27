@@ -28,16 +28,19 @@
   * Nondeterministic Polynomial(NP probelm): `O(2^n), O(n^n), O(n!)`
 
 * 只考虑最高项 
-  * O(2^N+N^2) = O(2^N) 
-  * O(N^3+1000N^2) = O(N^3)
+  * `O(2^N+N^2) = O(2^N)`
+  * `O(N^3+1000N^2) = O(N^3)`
 
 * 不考虑常数项和系数 
-  * O(100N+1000) = O(N) 
-  * O(logN) = O(log(N^2)) = O(log4(N))
+  * `O(100N+1000) = O(N)` 
+  * `O(logN) = O(log(N^2)) = O(log4(N))`
 
 
-时间复杂度为 O(N) 的算法有哪些? 
-双指针算法、打擂台算法 单调栈算法、单调队列算法 等等
+* `O(N)` algorithms? 
+  * 双指针算法 (high frequency)
+  * 打擂台算法 (high frequency)
+  * 单调栈算法
+  * 单调队列算法 
 
 
 
@@ -45,13 +48,8 @@
 
 ![Alt text](images/double-pointers.png?raw=true "Double Pointers")
 
-三种双指针算法 
-相向双指针(判断回文串) 
-背向双指针(最长回文串) 
-同向双指针
 
-
-相向双指针的分类 
+### 相向双指针的分类 
 * Reverse 型
   * 翻转字符串 
   * 判断回文串
@@ -64,17 +62,17 @@
   * 快速排序 
   * 颜色排序
 
-Example:  Valid Palindrome
-https://www.lintcode.com/problem/valid-palindrome/
+Example:  
+* [Valid Palindrome](/src/main/java/com/leetcode/doublepointers/E125ValidatePalindrome.java)
 
-Valid Palindrome II
+* Valid Palindrome II
 https://www.lintcode.com/problem/valid-palindrome-ii/
 
-Two Sum
+* Two Sum
 https://www.lintcode.com/problem/two-sum/
 
 
-哈希表的实现方法 
+* 哈希表的实现方法 
 时间复杂度 O(n) 
 空间复杂度 O(n)
 

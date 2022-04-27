@@ -1,6 +1,6 @@
 package com.leetcode.array
 
-import com.leetcode.array.twopointers.M075SortColors
+import com.leetcode.doublepointers.M075SortColors
 import spock.lang.Specification
 
 class M075SortColorsTest extends Specification {

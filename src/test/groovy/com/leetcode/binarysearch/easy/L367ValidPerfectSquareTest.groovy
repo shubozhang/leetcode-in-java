@@ -1,5 +1,6 @@
 package com.leetcode.binarysearch.easy
 
+import com.leetcode.binarysearch.L367ValidPerfectSquare
 import spock.lang.Specification
 
 class L367ValidPerfectSquareTest extends Specification {

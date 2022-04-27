@@ -1,6 +1,6 @@
 package com.leetcode.array.subarray
 
-import com.leetcode.array.twopointers.M209MinimumSizeSubarraySum
+import com.leetcode.doublepointers.M209MinimumSizeSubarraySum
 import spock.lang.Specification
 
 class M209MinimumSizeSubarraySumTest extends Specification {

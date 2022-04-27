@@ -1,6 +1,6 @@
 package com.leetcode.binarysearch.easy
 
-
+import com.leetcode.binarysearch.L240Search2DMarixII
 import spock.lang.Specification
 
 class L240Search2DMatrixIITest extends Specification {
