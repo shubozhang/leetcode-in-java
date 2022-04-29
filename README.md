@@ -126,12 +126,12 @@ Space complexity represents the amount of memory one program uses in order to ac
 
 
 #### 常见算法 Big O
-| O(N)                   | O(NlogN) | O(N^2) | O(2^N) |
-|------------------------|----------|--------|--------|
-| 双指针算法 (high frequency) |          |        | DP     |
-| 打擂台算法 (high frequency) |          |        |        |
-| 单调栈算法                  |          |        |        |
-| 单调队列算法                 |          |        |        |
+| O(N)                   | O(NlogN)   | O(logN)       | O(N^2),  O(N^3)          | O(2^N)      | O(N!)       |
+|------------------------|------------|---------------|--------------------------|-------------|-------------|
+| 双指针算法 (high frequency) | merge sort | binary search | Dynamic Programming (DP) | combination | permutation |
+| 打擂台算法 (high frequency) | quick sort |               |                          |
+| 单调栈算法                  |            |               |                          |
+| 单调队列算法                 |            |               |                          |
 
 
 
@@ -159,46 +159,64 @@ Space complexity represents the amount of memory one program uses in order to ac
 
 ### 相向双指针的分类
 * Reverse 型
-  * [Reverse String](/src/main/java/com/leetcode/doublepointers/E344ReverseString.java)
-  * [Valid Palindrome](/src/main/java/com/leetcode/doublepointers/E125ValidatePalindrome.java)
-  * [Valid Palindrome II](/src/main/java/com/leetcode/doublepointers/E680ValidatePalindromeII.java)
+  * [Reverse String](src/main/java/com/leetcode/doublepointers/E344ReverseString.java)
+  * [Valid Palindrome](src/main/java/com/leetcode/doublepointers/E125ValidatePalindrome.java)
+  * [Valid Palindrome II](src/main/java/com/leetcode/doublepointers/E680ValidatePalindromeII.java)
 
 * Two Sum 型
-  * [Two Sum](/src/main/java/com/leetcode/doublepointers/E001TwoSum.java)
-  * [Three Sum](/src/main/java/com/leetcode/doublepointers/M015ThreeSum.java)
+  * [Two Sum](src/main/java/com/leetcode/doublepointers/E001TwoSum.java)
+  * [Three Sum](src/main/java/com/leetcode/doublepointers/M015ThreeSum.java)
 
 * Partition 型
-  * [Quick Sort](/src/main/java/com/sorting/QuickSort.java)
-  * [Sort Colors](/src/main/java/com/leetcode/doublepointers/M075SortColors.java)
+  * [Quick Sort](src/main/java/com/sorting/QuickSort.java)
+  * [Sort Colors](src/main/java/com/leetcode/doublepointers/M075SortColors.java)
 
-
-
+  
 * 哈希表的实现方法
-  时间复杂度 O(n)
-  空间复杂度 O(n)
+  * 时间复杂度 O(n)
+  * 空间复杂度 O(n)
 
 
-排序 + 双指针
-时间复杂度 O(nlogn)
-空间复杂度 O(1)
-注意空间复杂度一般指额外空间复杂度 即不包含输入和输出
-
-面试追问 Follow Up
-Follow Up 1:
-- 如果输入数据已经排序，哪个算法更好?
-- Follow Up 2:
-- 如果需要返回所找的两个数在数组中的下标，哪个算法更好?
+* 排序 + 双指针
+  * 时间复杂度 O(nlogn)
+  * 空间复杂度 O(1)
+  * 注意空间复杂度一般指额外空间复杂度 即不包含输入和输出
 
 
+## Quick Sort And Merge Sort
+### Quick Sort
+[Quick Sort](src/main/java/com/sorting/QuickSort.java)
+* O(1) space cost (in place swap)
+* Instable sorting: can't guarantee the origin order if two elements are equal.
+* Time complexity (in average): O(NlogN) 
+* Worst scenario: O(N^2)
+
+### Merge Sort
+[Merge Sort](src/main/java/com/sorting/MergeSort.java)
+* Cost extra O(N) space
+* Stable sorting: does not change the order if two elements are equal
+* Time complexity: O(NlogN) 
 
 
 
 
 
+有没有其他方法一边增加数一边保持数组有序?
 
-
-
-
+方法
+分析
+Binary Search + List/Array Insert
+用BinarySearch可以通过O(logN)在有序数列中找到新数据插入位置 但是在List/Array(连续空间)中插入新元素会导致元素整体后移，需要O(N) 比如，[1,3,4,5,6,7] 中插入 2
+Binary Search + Linked List Insert
+Binary Search 是基于数组的算法，不是基于链表的算法 数组 Array - 连续型存储 - 支持 O(1) Index Access
+链表 Linked List - 离散型存储 – 不支持 O(1) Index Access，只支持 O(n) Index Access 链表中插入一个元素虽然是 O(1) 的，但是找到插入位置需要花 O(n) 的时间 (不能用二分)
+Heap (ProrityQueue)
+堆是一个树状结构，堆内部的元素组织顺序不是有序的
+堆可以实现 O(logN) 的插入
+但是双指针Two Sum的方法是基于一个 Sorted Array进行的，不能在堆中完成
+TreeMap (红黑树)
+TreeMap是一个树状结构 (O(N) 时间中序遍历之后可以得到一个有序数组) 双指针Two Sum的方法是基于一个 Sorted Array进行的，不能在TreeMap中完成 TreeMap 可以实现 O(logN) add 和 O(N) find
+不如 HashMap (O(1) add 和 O(N) 的 find) 的方法好
 
 
 
@@ -210,6 +228,21 @@ Follow Up 1:
 When to use binary search (`O(log(n))`):
 * sorted array
 * find a better performance than `O(n)`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Binary Tree

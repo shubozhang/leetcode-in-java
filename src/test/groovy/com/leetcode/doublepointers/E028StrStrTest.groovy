@@ -1,4 +1,4 @@
-package com.leetcode
+package com.leetcode.doublepointers
 
 import com.leetcode.string.E028StrStr
 import spock.lang.Specification

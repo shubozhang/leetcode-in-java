@@ -1,4 +1,4 @@
-package com.leetcode.string.easy
+package com.leetcode.doublepointers
 
 import com.leetcode.doublepointers.E125ValidatePalindrome
 import spock.lang.Specification

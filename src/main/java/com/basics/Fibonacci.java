@@ -1,6 +1,8 @@
 package com.basics;
 
 /**
+ https://leetcode.com/problems/fibonacci-number/
+
  * @author szhang
  */
 public class Fibonacci {
@@ -15,10 +17,11 @@ public class Fibonacci {
     }
 
     public static int calculate(int n) {
-        if (n <= 1) { return 0;}
+        if (n == 0) { return 0;}
+        if (n == 1) { return 1;}
         if (n == 2) { return 1;}
 
-        int[] temp = {0,1};
+        int[] temp = {1,1};
         int res = 0;
 
         for (int i = 3; i <= n; i++) {
@@ -30,7 +33,8 @@ public class Fibonacci {
     }
 
     public static int calculateByRecursive(int n) {
-        if (n <= 1) { return 0;}
+        if (n == 0) { return 0;}
+        if (n == 1) { return 1;}
         if (n == 2) { return 1;}
 
         return calculateByRecursive(n - 1) + calculateByRecursive(n - 2);
