@@ -1,5 +1,6 @@
 package com.leetcode.binarysearch
 
+import com.leetcode.doublepointers.E350IntersectionOfTwoArraysII
 import spock.lang.Specification
 
 class E350IntersectionOfTwoArraysIITest extends Specification {
