@@ -1,41 +1,49 @@
 package com.leetcode.string;
 
-/**
- * The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
- * (you may want to display this pattern in a fixed font for better legibility)
- * P   A   H   N
- * A P L S I I G
- * Y   I   R
- * And then read line by line: "PAHNAPLSIIGYIR"
- * Write the code that will take a string and make this conversion given a number of rows:
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
- * string convert(string text, int nRows);
- * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
+/**
+ https://leetcode.com/problems/zigzag-conversion/
+ The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
+ (you may want to display this pattern in a fixed font for better legibility)
+
+ P   A   H   N
+ A P L S I I G
+ Y   I   R
+ And then read line by line: "PAHNAPLSIIGYIR"
+
+ Write the code that will take a string and make this conversion given a number of rows:
+ string convert(string s, int numRows);
+
+ Example 1:
+ Input: s = "PAYPALISHIRING", numRows = 3
+ Output: "PAHNAPLSIIGYIR"
+
+ Example 2:
+ Input: s = "PAYPALISHIRING", numRows = 4
+ Output: "PINALSIGYAHRPI"
+ Explanation:
+ P     I    N
+ A   L S  I G
+ Y A   H R
+ P     I
+
+ Example 3:
+ Input: s = "A", numRows = 1
+ Output: "A"
+
+ Constraints:
+ 1) 1 <= s.length <= 1000
+ 2) s consists of English letters (lower-case and upper-case), ',' and '.'.
+ 3) 1 <= numRows <= 1000
  */
 public class L006ZigZagConversion {
 
-    public static void main(String[] args) {
-        System.out.println("PAHNAPLSIIGYIR".equals(convertA("PAYPALISHIRING", 3)));
-    }
+    public String convert(String s, int rows) {
 
-    private static String convertA(String s, int rows) {
-        StringBuilder str = new StringBuilder("");
-
-        for (int i = 0; i < s.length(); ) {
-            str = str.append(s.charAt(i));
-            i = i + rows + 1;
-        }
-
-        for (int i = 1; i < s.length(); i++) {
-            str = str.append(s.charAt(i));
-            i = i + rows - 1;
-        }
-
-        for (int i = 2; i < s.length(); i++) {
-            str = str.append(s.charAt(i));
-            i = i + rows + 1;
-        }
-        return str.toString();
+        return null;
     }
 
 

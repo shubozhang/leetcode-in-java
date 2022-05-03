@@ -1,4 +1,4 @@
-package com.leetcode.linkedlist.easy;
+package com.leetcode.linkedlist;
 
 import com.model.ListNode;
 
@@ -29,7 +29,7 @@ import com.model.ListNode;
  2) -100 <= Node.val <= 100
  3) Both list1 and list2 are sorted in non-decreasing order.
  * */
-public class L021MergeTwoSortedLists {
+public class E021MergeTwoSortedLists {
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null ) {return list2;}

@@ -29,6 +29,7 @@ import java.util.List;
  */
 public class M658FindKClosestElements {
 
+    // double pointers
     public List<Integer> findA(int[] arr, int k, int x) {
         int l = 0;
         int r = arr.length - 1;
