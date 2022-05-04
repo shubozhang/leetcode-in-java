@@ -30,7 +30,7 @@ import java.util.ArrayDeque;
 
  Example 1:
 
- <img src="{@docRoot}/doc-files/clone-graph.png"/>
+ <img src="{../../../doc-files/clone-graph.png"/>
 
  Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
  Output: [[2,4],[1,3],[2,4],[1,3]]
