@@ -21,6 +21,8 @@ public class Template {
 
     public static void find(Node node){
         Queue<Node> queue = new ArrayDeque<>();
+
+        // this can be used to track visited node (HashSet) or distance
         HashMap<Node, Integer> distance = new HashMap<>();
 
         queue.offer(node);

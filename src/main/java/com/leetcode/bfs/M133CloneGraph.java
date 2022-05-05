@@ -1,7 +1,8 @@
 package com.leetcode.bfs;
 
 
-import java.util.ArrayDeque;
+import com.model.Node;
+import java.util.*;
 
 /**
  https://leetcode.com/problems/clone-graph/
@@ -29,9 +30,6 @@ import java.util.ArrayDeque;
  given node as a reference to the cloned graph.
 
  Example 1:
-
- <img src="{../../../doc-files/clone-graph.png"/>
-
  Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
  Output: [[2,4],[1,3],[2,4],[1,3]]
  Explanation: There are 4 nodes in the graph.
@@ -61,7 +59,51 @@ import java.util.ArrayDeque;
  * */
 public class M133CloneGraph {
 
-    public static void main(String[] args) {
-        ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
+    public Node cloneGraph(Node node) {
+        if (node == null) {
+            return null;
+        }
+        if (node.neighbors == null || node.neighbors.size() == 0) {
+            return new Node(node.val);
+        }
+
+        // step 1: use bfs algorithm to traverse the graph and get all nodes.
+        List<Node> nodes = getNodes(node);
+
+        // step 2: copy nodes, store the old->new mapping information in a hash map
+        HashMap<Node, Node> mapping = new HashMap<>();
+        for (Node n : nodes) {
+            mapping.put(n, new Node(n.val));
+        }
+
+        // step 3: copy neighbors(edges)
+        for (Node n : nodes) {
+            Node newNode = mapping.get(n);
+            for (Node neighbor : n.neighbors) {
+                Node newNeighbor = mapping.get(neighbor);
+                newNode.neighbors.add(newNeighbor);
+            }
+        }
+
+        return mapping.get(node);
+    }
+
+    private List<Node> getNodes(Node node) {
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.offer(node);
+        Set<Node> set = new HashSet<>();
+        set.add(node);
+
+        while(!queue.isEmpty()) {
+            Node head = queue.poll();
+            for (Node neighbor : head.neighbors) {
+                if (!set.contains(neighbor)) {
+                    set.add(neighbor);
+                    queue.offer(neighbor);
+                }
+            }
+        }
+
+        return new ArrayList<>(set);
     }
 }
