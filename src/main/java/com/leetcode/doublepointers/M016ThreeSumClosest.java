@@ -1,5 +1,7 @@
 package com.leetcode.doublepointers;
 
+import java.util.Arrays;
+
 /**
  https://leetcode.com/problems/3sum-closest/
 
@@ -26,4 +28,35 @@ package com.leetcode.doublepointers;
 
  * */
 public class M016ThreeSumClosest {
+
+    public int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int diff = Integer.MAX_VALUE;
+        int len = nums.length;
+
+        for (int i = 0; i < len - 2 && diff != 0; i++) {
+            int lo = i + 1;
+            int hi = len - 1;
+
+            // improve performance a little bit
+            if (i != 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            while (lo < hi) {
+                int sum = nums[i] + nums[lo] + nums[hi];
+                if (Math.abs(target - sum) < Math.abs(diff)) {
+                    diff = target - sum;
+                }
+
+                if (sum < target) {
+                    lo++;
+                } else {
+                    hi--;
+                }
+            }
+
+        }
+        return target - diff;
+    }
+
 }

@@ -42,15 +42,16 @@ public class M015ThreeSum {
         }
 
         Arrays.sort(nums);
+        int len = nums.length;
 
-        // a < b < c, iterate from a
-        for(int i = 0; i < nums.length - 2; i++) {
+        // a < b < c, iterate from a and find twoSum b, c in range [i, len - 1]
+        for(int i = 0; i < len - 2; i++) {
             if (i != 0 && nums[i] == nums[i - 1]) {
                 // skip duplicates
                 continue;
             }
 
-            int left = i + 1, right = nums.length -1;
+            int left = i + 1, right = len -1;
             while (left < right) {
                 int sum = nums[left] + nums[right] + nums[i];
                 if (sum == 0) {
@@ -61,12 +62,14 @@ public class M015ThreeSum {
                     lists.add(list);
                     right--;
                     left++;
+
+                    // skip duplicates in left
                     while (left < right && nums[left] == nums[left - 1]) {
-                        // skip duplicates
                         left++;
                     }
+
+                    // skip duplicates in right
                     while (left < right && nums[right] == nums[right + 1]) {
-                        // skip duplicates
                         right--;
                     }
                 } else if (sum > 0) {

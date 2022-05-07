@@ -2,7 +2,9 @@
 
 ![Alt text](images/double-pointers.png?raw=true "Double Pointers")
 
-### 相向双指针的分类
+* this method can only againt SORTED array
+
+## 相向双指针的分类
 * Reverse 型
     * [Reverse String](src/main/java/com/leetcode/doublepointers/E344ReverseString.java)
     * [Valid Palindrome](src/main/java/com/leetcode/doublepointers/E125ValidatePalindrome.java)
