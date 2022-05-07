@@ -7,7 +7,7 @@ class M015ThreeSumTest extends Specification {
 
     def "find three sum"() {
         expect:
-        M015ThreeSum.versionA(nums as int[]) as int[][] == res as int[][]
+        new M015ThreeSum().versionA(nums as int[]) as int[][] == res as int[][]
 
         where:
         nums                  || res

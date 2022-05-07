@@ -35,7 +35,9 @@ import java.util.*;
  * */
 public class M015ThreeSum {
 
-    public static List<List<Integer>> versionA(int[] nums) {
+    // version A: two pointers approach
+    // reduce the dimension and re-use twoSum
+    public List<List<Integer>> versionA(int[] nums) {
         List<List<Integer>> lists = new ArrayList<>();
         if(nums == null || nums.length < 3) {
             return lists;
@@ -83,66 +85,52 @@ public class M015ThreeSum {
     }
 
 
-    // version B:
-    public static List<List<Integer>> results = new ArrayList<>();
-    public static List<List<Integer>> versionB(int[] A) {
+    // version B: extract twoSum method out
+    public List<List<Integer>> versionB(int[] A) {
+        List<List<Integer>> results = new ArrayList<>();
         if (A == null || A.length < 3) {
             return results;
         }
 
         Arrays.sort(A);
-        // enumerate c, the maximum element
-        int i;
-        int n = A.length;
-        for (i = 2; i < n; ++i) {
-            // c is always the last in a bunch of duplicates
-            if (i + 1 < n && A[i + 1] == A[i]) {
+        int len = A.length;
+        for (int i = 0; i < len - 2; i++) {
+            // skip duplicates
+            if (i != 0 && A[i] == A[i - 1]) {
                 continue;
             }
 
-            // want to find all pairs of A[j]+A[k]=-A[i], such that
-            // j < k < i
-            twoSum(A, i - 1, -A[i]);
+            twoSum(A, i , results);
         }
-        Collections.sort(results, new ListComparator<>());
         return results;
-
     }
 
-    private static void twoSum(int[] A, int right, int target) {
-        int i, j;
-        j = right;
-        for (i = 0; i <= right; ++i) {
-            // A[i] must be the first in its duplicates
-            if (i > 0 && A[i] == A[i - 1]) { continue; }
+    private void twoSum(int[] A, int index, List<List<Integer>> results) {
+        int left = index + 1;
+        int right = A.length - 1;
+        int target = -A[index];
 
-            while (j > i && A[j] > target - A[i]) { --j; }
+        while (left < right) {
+            int sum = A[left] + A[right];
+            if (sum == target) {
+                List<Integer> list = new ArrayList<>();
+                list.add(left);
+                list.add(right);
+                list.add(index);
+                results.add(list);
 
-            if (i >= j) { break; }
-
-            if (A[i] + A[j] == target) {
-                List<Integer> t = new ArrayList<>();
-                t.add(A[i]);
-                t.add(A[j]);
-                // t.add(A[right+1])
-                t.add(-target);
-                results.add(t);
-            }
-        }
-    }
-
-
-    // This is soring results using 1st number as 1st key, 2nd number as 2nd key...
-    static class ListComparator<T extends Comparable<T>> implements Comparator<List<Integer>> {
-        @Override
-        public int compare(List<Integer> a, List<Integer> b) {
-            for (int i = 0; i < Math.min(a.size(), b.size()); i++) {
-                int c = a.get(i).compareTo(b.get(i));
-                if (c != 0) {
-                    return c;
+                left++;
+                right--;
+                // skip dups
+                if (left < right && A[left] == A[left - 1]){
+                    left++;
                 }
+            } else if (sum > target) {
+                right--;
+            } else {
+                left++;
             }
-            return Integer.compare(a.size(), b.size());
         }
     }
+
 }
