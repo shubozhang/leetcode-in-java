@@ -335,3 +335,21 @@ R*C个点，R*C*2 条边(每个点上下左右4条边，每条边被2个点共�
 问是否存在拓扑序
 求是否存在且仅存在一个拓扑序
 求字典序最小的拓扑排序
+
+
+
+
+k数之和 
+https://www.lintcode.com/problem/k-sum/description 
+求方案总数 https://www.lintcode.com/problem/k-sum-ii/description 
+求具体方案 敬请期待在动态规划和深度优先搜索中对这两个问题的讲解
+
+
+相关题
+统计所有和 <= target 的配对数
+http://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/
+http://www.jiuzhang.com/solutions/two-sum-less-than-or-equal-to-target/
+统计所有和 >= target 的配对数
+http://www.lintcode.com/en/problem/two-sum-greater-than-target/
+http://www.jiuzhang.com/solutions/two-sum-greater-than-target/
+两数之和本质不同的方案数 统计所有和 >= target 的配对数
