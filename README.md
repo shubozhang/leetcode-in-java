@@ -334,3 +334,34 @@ Operations
 
 ![Alt text](images/BFS.png?raw=true "Breadth First Search")
 
+
+BFS in Matrix
+
+矩阵 vs 图
+图 Graph
+N个点，M条边
+M最大是 O(N^2) 的级别 图上BFS时间复杂度 = O(N + M)
+• 说是O(M)问题也不大，因为M一般都比N大
+所以最坏情况可能是 O(N^2)
+矩阵 Matrix
+R行C列
+R*C个点，R*C*2 条边(每个点上下左右4条边，每条边被2个点共享)。 矩阵中BFS时间复杂度 = O(R * C)
+
+
+
+拓扑排序 Topological Sorting
+
+拓扑排序 Topological Sorting 入度(In-degree):
+有向图(Directed Graph)中指向当前节点的点的个数(或指向当前节点的边的条数)
+算法描述:
+1. 统计每个点的入度
+2. 将每个入度为 0 的点放入队列(Queue)中作为起始节点
+3. 不断从队列中拿出一个点，去掉这个点的所有连边(指向其他点的边)，其他点的相应的入度 - 1 4. 一旦发现新的入度为 0 的点，丢回队列中
+   拓扑排序并不是传统的排序算法
+   一个图可能存在多个拓扑序(Topological Order)，也可能不存在任何拓扑序
+
+拓扑排序的四种不同问法
+求任意一个拓扑序
+问是否存在拓扑序
+求是否存在且仅存在一个拓扑序
+求字典序最小的拓扑排序

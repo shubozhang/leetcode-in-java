@@ -218,7 +218,6 @@
 * Count Primes (4 times): https://leetcode.com/problems/count-primes/
 * 3Sum Closest (4 times): https://leetcode.com/problems/3sum-closest/
 * Get Biggest Three Rhombus Sums in a Grid (3 times): https://leetcode.com/problems/get-biggest-three-rhombus-sums-in-a-grid/
-* Rodgerdodger17 (c1) — Today at 1:58 PM
 
 
 # Most Popular Problems for Bloomberg (last 6 months):
