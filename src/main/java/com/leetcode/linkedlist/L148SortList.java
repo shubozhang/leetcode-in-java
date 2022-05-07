@@ -1,4 +1,4 @@
-package com.leetcode.linkedlist.medium;
+package com.leetcode.linkedlist;
 /**
  https://leetcode.com/problems/sort-list/
 

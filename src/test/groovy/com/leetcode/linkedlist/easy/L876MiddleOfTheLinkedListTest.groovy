@@ -1,5 +1,6 @@
 package com.leetcode.linkedlist.easy
 
+import com.leetcode.linkedlist.L876MiddleOfTheLinkedList
 import com.model.ListNode
 import com.utils.ListNodeUtils
 import spock.lang.Specification
