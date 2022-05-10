@@ -43,8 +43,8 @@ import java.util.HashMap;
  * */
 public class M146LRUCache {
 
-    private int capacity;
-    private HashMap<Integer, DoubleLinkedNode> hs = new HashMap<Integer, DoubleLinkedNode>();
+    private final int capacity;
+    private HashMap<Integer, DoubleLinkedNode> keyToPrev = new HashMap<Integer, DoubleLinkedNode>();
     private DoubleLinkedNode head = new DoubleLinkedNode(-1, -1);
     private DoubleLinkedNode tail = new DoubleLinkedNode(-1, -1);
 
@@ -56,20 +56,21 @@ public class M146LRUCache {
 
     public int get(int key) {
         //key找不到
-        if( !hs.containsKey(key)) {
+        if( !keyToPrev.containsKey(key)) {
             return -1;
         }
 
         // remove current
-        DoubleLinkedNode current = hs.get(key);
+        DoubleLinkedNode current = keyToPrev.get(key);
         current.prev.next = current.next;
         current.next.prev = current.prev;
 
         // move current to tail
         //每次get，使用次数+1，最近使用，放于尾部
+        //
         move_to_tail(current);
 
-        return hs.get(key).value;
+        return keyToPrev.get(key).value;
     }
 
 
@@ -77,21 +78,21 @@ public class M146LRUCache {
     public void put(int key, int value) {
         // get 这个方法会把key挪到最末端，因此，不需要再调用 move_to_tail
         if (get(key) != -1) {
-            hs.get(key).value = value;
+            keyToPrev.get(key).value = value;
             return;
         }
 
         //超出缓存上限
-        if (hs.size() == capacity) {
+        if (keyToPrev.size() == capacity) {
             //删除头部数据
-            hs.remove(head.next.key);
+            keyToPrev.remove(head.next.key);
             head.next = head.next.next;
             head.next.prev = head;
         }
 
         //新建节点
         DoubleLinkedNode insert = new DoubleLinkedNode(key, value);
-        hs.put(key, insert);
+        keyToPrev.put(key, insert);
         //放于尾部
         move_to_tail(insert);
     }
