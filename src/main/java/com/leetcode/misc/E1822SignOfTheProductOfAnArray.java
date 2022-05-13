@@ -1,6 +1,9 @@
 package com.leetcode.misc;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  https://leetcode.com/problems/sign-of-the-product-of-an-array/
  There is a function signFunc(x) that returns:
@@ -50,5 +53,18 @@ public class E1822SignOfTheProductOfAnArray {
         } else {
             return -1;
         }
+    }
+
+    public int arraySignB(int[] nums) {
+        int product = 1;
+        for (int i : nums) {
+            if (i == 0) {
+                return 0;
+            }
+
+            product *= i / Math.abs(i);
+        }
+
+        return product;
     }
 }
