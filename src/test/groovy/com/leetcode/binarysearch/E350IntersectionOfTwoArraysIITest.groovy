@@ -7,7 +7,7 @@ class E350IntersectionOfTwoArraysIITest extends Specification {
 
     def "intersection of two arrays"() {
         expect:
-        E350IntersectionOfTwoArraysII.intersect(nums1 as int[], nums2 as int[]) == res as int[]
+        E350IntersectionOfTwoArraysII.intersection(nums1 as int[], nums2 as int[]) == res as int[]
 
         where:
         nums1        | nums2           || res
