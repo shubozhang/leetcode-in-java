@@ -1,5 +1,10 @@
 package com.leetcode.string;
 
+import java.util.ArrayDeque;
+import java.util.HashSet;
+import java.util.Queue;
+import java.util.Set;
+
 /**
  * For a given source string and a target string, you should output the first
  * index(from 0) of target string in source string.
