@@ -193,6 +193,207 @@ Follow Up 1:
 
 
 
+## Quick Sort And Merge Sort
+### Quick Sort
+[Quick Sort](src/main/java/com/sorting/QuickSort.java)
+* O(1) space cost (in place swap)
+* Instable sorting: can't guarantee the origin order if two elements are equal.
+* Time complexity (in average): O(NlogN)
+* Worst scenario: O(N^2)
+
+### Merge Sort
+[Merge Sort](src/main/java/com/sorting/MergeSort.java)
+* Cost extra O(N) space
+* Stable sorting: does not change the order if two elements are equal
+* Time complexity: O(NlogN)
+
+
+
+
+
+有没有其他方法一边增加数一边保持数组有序?
+
+方法
+分析
+Binary Search + List/Array Insert
+用BinarySearch可以通过O(logN)在有序数列中找到新数据插入位置 但是在List/Array(连续空间)中插入新元素会导致元素整体后移，需要O(N) 比如，[1,3,4,5,6,7] 中插入 2
+Binary Search + Linked List Insert
+Binary Search 是基于数组的算法，不是基于链表的算法 数组 Array - 连续型存储 - 支持 O(1) Index Access
+链表 Linked List - 离散型存储 – 不支持 O(1) Index Access，只支持 O(n) Index Access 链表中插入一个元素虽然是 O(1) 的，但是找到插入位置需要花 O(n) 的时间 (不能用二分)
+Heap (ProrityQueue)
+堆是一个树状结构，堆内部的元素组织顺序不是有序的
+堆可以实现 O(logN) 的插入
+但是双指针Two Sum的方法是基于一个 Sorted Array进行的，不能在堆中完成
+TreeMap (红黑树)
+TreeMap是一个树状结构 (O(N) 时间中序遍历之后可以得到一个有序数组) 双指针Two Sum的方法是基于一个 Sorted Array进行的，不能在TreeMap中完成 TreeMap 可以实现 O(logN) add 和 O(N) find
+不如 HashMap (O(1) add 和 O(N) 的 find) 的方法好
+
+
+
+
+
+
+## Binary Search
+
+When to use binary search (`O(log(n))`):
+* sorted array
+* find a better performance than `O(n)`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Binary Tree
+* BFS in Binary Tree
+* Binary Searh Tree
+  * Insert / Remove / Find / Validate
+
+* Traverse a tree by order:
+  * Preorder: root -> left -> right
+  * Inorder: left -> root -> right
+  * Postorder: left -> right -> root
+
+* Traverse a try by algorithms
+  * Non-recursion
+  * Traverse (recursion)
+  * Divide Conquer (recursion)
+
+1. Define recursive
+2. Define exit
+3. Convert it small chunk of problem
+
+## Linked List
+
+* L092 Reverse Linked List II
+
+![Alt text](images/L092.png?raw=true "Reverse Linked List II")
+
+
+
+## Array
+
+* Four Sum
+  sort -> O(n^2) => O(n)
+  3sum O(n^3) => O(n^2)
+  4sum O(n^4) => O(n^3)
+
+
+## Data Structure
+
+Queue
+Operations
+● O(1) Push
+● O(1) Pop
+● O(1) Top
+Core data structure for BFS!
+
+
+Stack
+Operations:
+● O(1) Push
+● O(1) Pop
+● O(1) Top
+
+// ascending / descending stack
+O(n^2) => O(N)
+
+DP: O(2^n) => O(n^2)
+O(nlogn):
+1. sorting and then binary search
+2. use a O(logn) data structure: like heap / priority queue
+
+Hash
+Operations
+● O(1) Insert
+● O(1) Delete
+● O(1) Find
+Hash Function Collision
+● Open Hashing (LinkedList)
+● Closed Hashing (ArrayList)
+
+
+Java
+● HashTable ● HashSet
+● HashMap
+Which on is Thread Safe?
+
+
+
+Heap
+Operations
+● O(log N) Add
+● O(log N) Remove
+● O(1) Min/Max
+
+
+
+## BFS (Breadth First Search)
+
+
+![Alt text](images/BFS.png?raw=true "Breadth First Search")
+
+
+BFS in Matrix
+
+矩阵 vs 图
+图 Graph
+N个点，M条边
+M最大是 O(N^2) 的级别 图上BFS时间复杂度 = O(N + M)
+• 说是O(M)问题也不大，因为M一般都比N大
+所以最坏情况可能是 O(N^2)
+矩阵 Matrix
+R行C列
+R*C个点，R*C*2 条边(每个点上下左右4条边，每条边被2个点共享)。 矩阵中BFS时间复杂度 = O(R * C)
+
+
+
+拓扑排序 Topological Sorting
+
+拓扑排序 Topological Sorting 入度(In-degree):
+有向图(Directed Graph)中指向当前节点的点的个数(或指向当前节点的边的条数)
+算法描述:
+1. 统计每个点的入度
+2. 将每个入度为 0 的点放入队列(Queue)中作为起始节点
+3. 不断从队列中拿出一个点，去掉这个点的所有连边(指向其他点的边)，其他点的相应的入度 - 1 4. 一旦发现新的入度为 0 的点，丢回队列中
+   拓扑排序并不是传统的排序算法
+   一个图可能存在多个拓扑序(Topological Order)，也可能不存在任何拓扑序
+
+拓扑排序的四种不同问法
+求任意一个拓扑序
+问是否存在拓扑序
+求是否存在且仅存在一个拓扑序
+求字典序最小的拓扑排序
+
+
+
+
+k数之和
+https://www.lintcode.com/problem/k-sum/description
+求方案总数 https://www.lintcode.com/problem/k-sum-ii/description
+求具体方案 敬请期待在动态规划和深度优先搜索中对这两个问题的讲解
+
+
+相关题
+统计所有和 <= target 的配对数
+http://www.lintcode.com/problem/two-sum-less-than-or-equal-to-target/
+http://www.jiuzhang.com/solutions/two-sum-less-than-or-equal-to-target/
+统计所有和 >= target 的配对数
+http://www.lintcode.com/en/problem/two-sum-greater-than-target/
+http://www.jiuzhang.com/solutions/two-sum-greater-than-target/
+两数之和本质不同的方案数 统计所有和 >= target 的配对数
+
 
 
 
