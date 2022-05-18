@@ -1,5 +1,8 @@
-package com.leetcode.doublepointers;
+package com.leetcode.misc;
 
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  Given an integer array nums and an integer k, return true if there are two distinct indices i
@@ -28,7 +31,24 @@ package com.leetcode.doublepointers;
  0 <= k <= 105
  * */
 public class E219ContainsDuplicateII {
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k == 0) {
+            return false;
+        }
+        int len = nums.length;
+        // <value, index>
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i< len; i++) {
+            if (map.containsKey(nums[i])) {
+                if (i - map.get(nums[i]) <= k) {
+                    return true;
+                }
+            }
 
+            map.put(nums[i], i);
+        }
+        return false;
+    }
 
     public boolean containsNearbyDuplicateB(int[] nums, int k) {
         if (nums == null || nums.length == 0) {
