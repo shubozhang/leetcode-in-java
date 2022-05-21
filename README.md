@@ -161,29 +161,46 @@ Space complexity represents the amount of memory one program uses in order to ac
   * char: `str.charAt(i)`
   * substring: `str.substring(i, j)` // does not include index `j`
   * char[]: `str.toCharArray()`
-* HashMap:
-  * add: `map.put(key, value)`
-  * get (or check key): `map.get(key) -> return value or null`
-  * getOrDefault: `map.getOrDefault(key, defaultValue) -> value`
-  * delete: `map.remove(key)`
-  * keySets: `map.keySet() -> set`
-  * values: `map.values()`
-  * containsKey: `map.containsKey()`
-  * containsValue: `map.containsValue()`
-  * iterate: `for(Map.Entry<key, value> entry: map.entrySet()`
-* HashSet:
-  * size: `set.size()`
-  * add (or check element): `set.add(e) -> return false if e already exists in the set`
-  * contains: `set.contains(e)`
-  * delete: `set.remove(e)`
-* Stack:
-  * add: `stack.push(o)`
-  * get and remove: `stack.pop()` // get and remove the top object from the stack
-  * get: `stack.peek()` // look at the top object of the stack
-  * isEmpty(): `stack.isEmpty()`
-* Queue
-  * add: `quque.offer(object)` // return false if fails to insert into the queue
-  * remove head: `quque.poll()` // retrieve and removes the head of the queue
-  * `quque.peek()`
-  * `queue.isEmpty()`
-  * `queue.contains(o)`
+
+
+| Map / HashMap                 | Java                                                                                                                           |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| create                        | `Map<key, value> map = new HashMap<>()`                                                                                        |
+| add / update O(1)             | `map.put(key, value)`                                                                                                          |
+| get (or check key) O(1)       | `map.get(key) -> return value or null`                                                                                         |
+| getOrDefault   O(1)           | `map.getOrDefault(key, defaultValue) -> value`                                                                                 |
+| delete    O(1)                | `map.remove(key)`                                                                                                              |
+| keySets                       | `map.keySet() -> set`                                                                                                          |
+| values                        | `map.values()`                                                                                                                 |
+| containsKey  O(1)             | `map.containsKey()`                                                                                                            |
+| containsValue O(n) /O(log(n)) | `map.containsValue()`                                                                                                          |
+| iterate   O(n)                | `for(Map.Entry<key, value> entry: map.entrySet())` <br/> `for(Object key: map.keyset())` <br/> `for(Object value : map.values())` |
+
+
+
+| Set / HashSet:<br/> <li> no dups <br/> <li> un-order | Java|
+|------------------------------------------------------|---|
+| create                                               | Set<Integer> set = new HashSet<>()|
+| add    O(1)                                          | set.add(1)|
+| delete  O(1)                                         | set.remove(2)|
+| seach  O(1)                                          | set.contains(1)|
+| size   O(1)                                          | set.size()|
+| interate O(n)                                        | for (Obj val : set)|
+
+
+| Stack | Java|
+|---|---|
+| add| `stack.push(o)`|
+| get and remove| `stack.pop()` // get and remove the top object from the stack|
+| get| `stack.peek()` // look at the top object of the stack|
+| isEmpty()| `stack.isEmpty()`|
+
+
+
+| Queue       | Java                                                                    |
+|-------------|-------------------------------------------------------------------------|
+| add         | `quque.offer(object)` // return false if fails to insert into the queue |
+| remove head | `quque.poll()` // retrieve and removes the head of the queue            |
+|             | `quque.peek()`                                                          |
+|             | `queue.isEmpty()`                                                       |
+|             | `queue.contains(o)`                                                     |
