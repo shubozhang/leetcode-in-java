@@ -177,8 +177,11 @@ Space complexity represents the amount of memory one program uses in order to ac
 | iterate   O(n)                | `for(Map.Entry<key, value> entry: map.entrySet())` <br/> `for(Object key: map.keyset())` <br/> `for(Object value : map.values())` |
 
 
+* Set
+  * No duplicates 
+  * un ordered
 
-| Set / HashSet:<br/> <li> no dups <br/> <li> un-order | Java|
+| Set / HashSet| Java|
 |------------------------------------------------------|---|
 | create                                               | Set<Integer> set = new HashSet<>()|
 | add    O(1)                                          | set.add(1)|
