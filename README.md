@@ -200,10 +200,11 @@ Space complexity represents the amount of memory one program uses in order to ac
 
 
 
-| Queue       | Java                                                                    |
-|-------------|-------------------------------------------------------------------------|
-| add         | `quque.offer(object)` // return false if fails to insert into the queue |
-| remove head | `quque.poll()` // retrieve and removes the head of the queue            |
-|             | `quque.peek()`                                                          |
-|             | `queue.isEmpty()`                                                       |
-|             | `queue.contains(o)`                                                     |
+| Queue            | Java                                                                    |
+|------------------|-------------------------------------------------------------------------|
+| add              | `quque.offer(object)` // return false if fails to insert into the queue |
+| remove head      | `quque.poll()` // retrieve and removes the head of the queue            |
+| remove head      | `quque.remove()` // retrieve and removes the head of the queue          |
+| read head        | `quque.peek()` // retrieve the head value                               |
+| check empty      | `queue.isEmpty()`                                                       |
+| container object | `queue.contains(o)`                                                     |
