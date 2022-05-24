@@ -2,38 +2,31 @@ package com.leetcode.datastructure;
 
 import java.util.*;
 
-public class M1429FirstUniqueNumberInDataStream {
-    // it needs to maintain the insert order
-    private Map<Integer, Integer> map = new LinkedHashMap<>();
+public class M1429FirstUniqueNumberInDataStreamB {
+    private Map<Integer, Integer> map = new HashMap<>();
     //
-    private Set<Integer> dupSet = new HashSet<>();
-    public M1429FirstUniqueNumberInDataStream(int[] nums) {
+    private Set<Integer> uniqueSet = new LinkedHashSet<>();
+    public M1429FirstUniqueNumberInDataStreamB(int[] nums) {
         for (int num : nums) {
             this.add(num);
         }
     }
 
     public int showFirstUnique() {
-        if (map.isEmpty()) { return -1;}
+        if (uniqueSet.isEmpty()) { return -1;}
 
-        for (Integer key : map.keySet()) {
-            return key;
-        }
-
-        return -1;
+        return uniqueSet.iterator().next();
     }
 
     public void add(int value) {
-        if (dupSet.contains(value)) { return; }
-
         int mapValue = map.getOrDefault(value, 0) + 1;
         if (mapValue == 1) {
             map.put(value, mapValue);
+            uniqueSet.add(value);
         }
 
         if (mapValue > 1) {
-            map.remove(value);
-            dupSet.add(value);
+            uniqueSet.remove(value);
         }
     }
 
