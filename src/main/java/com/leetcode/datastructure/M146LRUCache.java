@@ -1,4 +1,4 @@
-package com.leetcode.datastructure.hash;
+package com.leetcode.datastructure;
 
 import com.model.DoubleLinkedNode;
 

@@ -1,4 +1,4 @@
-package com.leetcode.datastructure.stack;
+package com.leetcode.datastructure;
 
 
 import java.util.Stack;

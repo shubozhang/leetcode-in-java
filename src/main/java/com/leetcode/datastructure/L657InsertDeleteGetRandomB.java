@@ -41,11 +41,14 @@ import java.util.*;
  Two hashMaps method
  * */
 public class L657InsertDeleteGetRandomB {
-    private Map<Integer, Integer> valIndex = new HashMap<>();
-    private Map<Integer, Integer> indexVal = new HashMap<>();
-    private Random rand = new Random();
+    private Map<Integer, Integer> valIndex;
+    private Map<Integer, Integer> indexVal;
+    private Random rand;
     public L657InsertDeleteGetRandomB() {
         // do intialization if necessary
+        valIndex = new HashMap<>();
+        indexVal = new HashMap<>();
+        rand = new Random();
     }
 
     /*

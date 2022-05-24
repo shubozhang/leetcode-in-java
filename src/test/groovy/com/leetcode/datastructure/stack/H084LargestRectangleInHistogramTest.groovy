@@ -1,5 +1,6 @@
 package com.leetcode.datastructure.stack
 
+import com.leetcode.datastructure.H084LargestRectangleInHistogram
 import spock.lang.Specification
 
 class H084LargestRectangleInHistogramTest extends Specification {
