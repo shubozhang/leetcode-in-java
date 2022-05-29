@@ -155,21 +155,21 @@ Space complexity represents the amount of memory one program uses in order to ac
 
 ## Double pointers
 
-![Alt text](images/double-pointers.png?raw=true "Double Pointers")
+![Alt text](../images/double-pointers.png?raw=true "Double Pointers")
 
 ### 相向双指针的分类 
 * Reverse 型
   * 翻转字符串 
-  * [Valid Palindrome](/src/main/java/com/leetcode/doublepointers/E125ValidatePalindrome.java)
+  * [Valid Palindrome](/com/leetcode/doublepointers/E125ValidatePalindrome.java)
   * [Valid Palindrome II](/src/main/java/com/leetcode/doublepointers/E680ValidPalindromeII.java)
   
 * Two Sum 型 
-  * [Two Sum](/src/main/java/com/leetcode/doublepointers/E001TwoSum.java)
-  * [Three Sum](/src/main/java/com/leetcode/doublepointers/M015ThreeSum.java) 
+  * [Two Sum](/com/leetcode/doublepointers/E001TwoSum.java)
+  * [Three Sum](/com/leetcode/doublepointers/M015ThreeSum.java) 
 
 * Partition 型
-  * [Quick Sort](/src/main/java/com/sorting/QuickSort.java) 
-  * [Sort Colors](/src/main/java/com/leetcode/doublepointers/M075SortColors.java)
+  * [Quick Sort](/com/sorting/QuickSort.java) 
+  * [Sort Colors](/com/leetcode/doublepointers/M075SortColors.java)
   
 
   
@@ -195,14 +195,14 @@ Follow Up 1:
 
 ## Quick Sort And Merge Sort
 ### Quick Sort
-[Quick Sort](src/main/java/com/sorting/QuickSort.java)
+[Quick Sort](../src/main/java/com/sorting/QuickSort.java)
 * O(1) space cost (in place swap)
 * Instable sorting: can't guarantee the origin order if two elements are equal.
 * Time complexity (in average): O(NlogN)
 * Worst scenario: O(N^2)
 
 ### Merge Sort
-[Merge Sort](src/main/java/com/sorting/MergeSort.java)
+[Merge Sort](../src/main/java/com/sorting/MergeSort.java)
 * Cost extra O(N) space
 * Stable sorting: does not change the order if two elements are equal
 * Time complexity: O(NlogN)
@@ -278,7 +278,7 @@ When to use binary search (`O(log(n))`):
 
 * L092 Reverse Linked List II
 
-![Alt text](images/L092.png?raw=true "Reverse Linked List II")
+![Alt text](../images/L092.png?raw=true "Reverse Linked List II")
 
 
 
@@ -342,7 +342,7 @@ Operations
 ## BFS (Breadth First Search)
 
 
-![Alt text](images/BFS.png?raw=true "Breadth First Search")
+![Alt text](../images/BFS.png?raw=true "Breadth First Search")
 
 
 BFS in Matrix
@@ -436,7 +436,7 @@ When to use binary search (`O(log(n))`):
 
 * L092 Reverse Linked List II
 
-![Alt text](images/L092.png?raw=true "Reverse Linked List II")
+![Alt text](../images/L092.png?raw=true "Reverse Linked List II")
 
 
 
