@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.easy;
+package com.leetcode.binarytree;
 
 import com.model.TreeNode;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import java.util.Stack;
  *
  * @author shubozhang
  */
-public class T067BinaryTreeInorderTraversal {
+public class TE067BinaryTreeInorderTraversal {
 
     // Version A: Non-Recursion (Recommended)
     // Search left tree, save current nod, and then search right tree.

@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.medium;
+package com.leetcode.binarytree;
 
 /**
  * BST's in-order traversal is ascending.
@@ -19,5 +19,5 @@ package com.leetcode.binarytree.medium;
  * The above binary tree is serialized as {2,1,4,#,#,3,5} (in level order).
  * @author shubozhang
  */
-public class T095ValidateBinarySearchTree {
+public class TM095ValidateBinarySearchTree {
 }

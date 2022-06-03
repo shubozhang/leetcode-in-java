@@ -1,11 +1,11 @@
 package com.leetcode.binarytree
 
-import com.leetcode.binarytree.easy.T068BinaryTreePostorderTraversal
+
 import com.model.TreeNode
 import org.junit.Before
 import spock.lang.Specification
 
-class T068BinaryTreePostorderTraversalTest extends Specification {
+class TE068BinaryTreePostorderTraversalTest extends Specification {
     private TreeNode root
 
     /**
@@ -32,7 +32,7 @@ class T068BinaryTreePostorderTraversalTest extends Specification {
 
     def "binary tree postorder traversal in divide-conquer way"(){
         when:
-        List<Integer> resList = T068BinaryTreePostorderTraversal.postorderTraversal(root)
+        List<Integer> resList = TE068BinaryTreePostorderTraversal.postorderTraversal(root)
 
         then:
         resList == [4, 5, 2, 3, 1]

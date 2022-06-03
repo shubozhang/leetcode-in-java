@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.easy;
+package com.leetcode.binarytree;
 
 import com.model.TreeNode;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import java.util.Stack;
  *
  * @author shubozhang
  */
-public class T066BinaryTreePreorderTraversal {
+public class TE066BinaryTreePreorderTraversal {
 
      // Version A: Non-Recursion (Recommended)
     public static List<Integer> preorderTraversalA(TreeNode root) {

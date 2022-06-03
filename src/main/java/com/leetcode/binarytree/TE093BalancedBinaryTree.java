@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.easy;
+package com.leetcode.binarytree;
 
 import com.model.TreeNode;
 
@@ -21,7 +21,7 @@ import com.model.TreeNode;
  *
  * @author shubozhang
  */
-public class T093BalancedBinaryTree {
+public class TE093BalancedBinaryTree {
 
     public static boolean isBalanced(TreeNode root) {
         return maxDepth(root) != -1;

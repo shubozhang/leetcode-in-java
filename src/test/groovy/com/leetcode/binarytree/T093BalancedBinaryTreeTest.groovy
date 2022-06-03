@@ -1,6 +1,6 @@
 package com.leetcode.binarytree
 
-import com.leetcode.binarytree.easy.T093BalancedBinaryTree
+
 import com.model.TreeNode
 import org.junit.Before
 import spock.lang.Specification
@@ -42,8 +42,8 @@ class T093BalancedBinaryTreeTest extends Specification {
 
     def "balanced binary tree"() {
         when:
-        boolean res1 = T093BalancedBinaryTree.isBalanced(root1)
-        boolean res2 = T093BalancedBinaryTree.isBalanced(root2)
+        boolean res1 = TE093BalancedBinaryTree.isBalanced(root1)
+        boolean res2 = TE093BalancedBinaryTree.isBalanced(root2)
 
         then:
         assertEquals(true, res1)

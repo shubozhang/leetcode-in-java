@@ -1,9 +1,8 @@
 package com.leetcode.binarytree
 
-import com.leetcode.binarytree.easy.T067BinaryTreeInorderTraversal
+
 import com.model.TreeNode
 import org.junit.Before
-import org.junit.jupiter.api.BeforeEach
 import spock.lang.Specification
 
 class T067BinaryTreeInorderTraversalTest extends Specification {
@@ -36,7 +35,7 @@ class T067BinaryTreeInorderTraversalTest extends Specification {
 
     def "binary tree inorder traversal in non-recursive way"(){
         when:
-        List<Integer> resList = T067BinaryTreeInorderTraversal.inorderTraversalA(root)
+        List<Integer> resList = TE067BinaryTreeInorderTraversal.inorderTraversalA(root)
 
         then:
         resList == expectedList
@@ -44,7 +43,7 @@ class T067BinaryTreeInorderTraversalTest extends Specification {
 
     def "binary tree inorder traversal in divide-conquer way"(){
         when:
-        List<Integer> resList = T067BinaryTreeInorderTraversal.inorderTraversalB(root)
+        List<Integer> resList = TE067BinaryTreeInorderTraversal.inorderTraversalB(root)
 
         then:
         resList == expectedList

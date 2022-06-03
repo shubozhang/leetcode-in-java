@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.easy;
+package com.leetcode.binarytree;
 
 import com.model.TreeNode;
 
@@ -6,7 +6,7 @@ import com.model.TreeNode;
  *
  * @author Shubo
  */
-public class T097MaximumDepthOfBinaryTree {
+public class TE097MaximumDepthOfBinaryTree {
 
     public int maxDepth(TreeNode root) {
         if (root == null) {

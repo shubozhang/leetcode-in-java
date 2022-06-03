@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.easy;
+package com.leetcode.binarytree;
 
 import com.model.TreeNode;
 
@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author shubozhang
  */
-public class T068BinaryTreePostorderTraversal {
+public class TE068BinaryTreePostorderTraversal {
 
     public static List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();

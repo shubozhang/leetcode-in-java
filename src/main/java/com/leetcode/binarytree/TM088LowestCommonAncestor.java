@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.medium;
+package com.leetcode.binarytree;
 
 
 /**
@@ -6,7 +6,7 @@ package com.leetcode.binarytree.medium;
  * @author Shubo
  * @date 9/4/2016
  */
-public class T088LowestCommonAncestor {
+public class TM088LowestCommonAncestor {
 
 //    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode A, TreeNode B) {
 //        if (root == null) {

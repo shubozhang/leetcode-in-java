@@ -1,11 +1,11 @@
 package com.leetcode.binarytree
 
-import com.leetcode.binarytree.easy.T066BinaryTreePreorderTraversal
+
 import com.model.TreeNode
 import org.junit.Before
 import spock.lang.Specification
 
-class T066BinaryTreePreorderTraversalTest extends Specification{
+class TE066BinaryTreePreorderTraversalTest extends Specification{
     private TreeNode root;
 
     /**
@@ -32,21 +32,21 @@ class T066BinaryTreePreorderTraversalTest extends Specification{
 
     def "binary tree preorder traversal in non-recursive way"(){
         when:
-        List<Integer> resList = T066BinaryTreePreorderTraversal.preorderTraversalA(root)
+        List<Integer> resList = TE066BinaryTreePreorderTraversal.preorderTraversalA(root)
 
         then:
         resList == [1, 2, 4, 5, 3]
     }
     def "binary tree preorder traversal in recursive way"(){
         when:
-        List<Integer> resList = T066BinaryTreePreorderTraversal.preorderTraversalB(root)
+        List<Integer> resList = TE066BinaryTreePreorderTraversal.preorderTraversalB(root)
 
         then:
         resList == [1, 2, 4, 5, 3]
     }
     def "binary tree preorder traversal in divide and conquer "(){
         when:
-        List<Integer> resList = T066BinaryTreePreorderTraversal.preorderTraversalC(root)
+        List<Integer> resList = TE066BinaryTreePreorderTraversal.preorderTraversalC(root)
 
         then:
         resList == [1, 2, 4, 5, 3]

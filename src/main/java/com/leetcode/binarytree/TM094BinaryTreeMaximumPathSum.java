@@ -1,4 +1,4 @@
-package com.leetcode.binarytree.medium;
+package com.leetcode.binarytree;
 
 import com.model.TreeNode;
 
@@ -13,7 +13,7 @@ import com.model.TreeNode;
   * return 6.
  * @author shubozhang
  */
-public class T094BinaryTreeMaximumPathSum {
+public class TM094BinaryTreeMaximumPathSum {
 
     public int maxPahtSum(TreeNode root) {
         ResultType resultType = helper(root);
