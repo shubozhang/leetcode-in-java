@@ -20,6 +20,6 @@
 
 Example: TM069BinaryTreeLevelOrderTraversal
 
-## [BFS Template](src/main/java/com/leetcode/bfs/BFSTemplate.java)
+## [BFS Template](/src/main/java/com/leetcode/bfs/BFSTemplate.java)
 
 N个点，M条边，图上BFS时间复杂度 = O(N + M)，说是O(M)问题也不大，因为M一般都比N大 M最大是 O(N^2) 的级别(任意两个点之间都有边)， 所以最坏情况可能是 O(N^2)
