@@ -1,9 +1,11 @@
 package com.model;
 
 public class TreeNode {
-    public int val;
+    public Integer val;
     public TreeNode left, right;
-    public TreeNode(int val) {
+
+    public TreeNode(){}
+    public TreeNode(Integer val) {
         this.val = val;
         this.left = this.right = null;
     }

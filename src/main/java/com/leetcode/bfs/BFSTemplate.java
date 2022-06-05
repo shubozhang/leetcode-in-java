@@ -17,19 +17,24 @@ import java.util.Queue;
  the queue. This is useful if you're dealing with a size-limited queue but do not want to throw
  an exception.
  * */
-public class Template {
+public class BFSTemplate {
 
     public static void find(Node node){
+        // in initialization, ArrayDeque is faster than LinkedList
         Queue<Node> queue = new ArrayDeque<>();
 
         // this can be used to track visited node (HashSet) or distance
         HashMap<Node, Integer> distance = new HashMap<>();
 
+        // add root to the queue and start distance to root is 0
         queue.offer(node);
         distance.put(node, 0);
 
+        // loop queue and pop one element at one time
         while (!queue.isEmpty()) {
             Node newNode = queue.poll();
+
+            // pop all neighbors and add them into the queue
             for(Node neighbor: newNode.neighbors) {
                 if (distance.containsKey(neighbor)){
                     continue;
