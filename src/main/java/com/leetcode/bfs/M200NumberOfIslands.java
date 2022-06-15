@@ -49,6 +49,7 @@ public class M200NumberOfIslands {
 
         int islands = 0;
 
+        // use a same size array to record visited grid
         int n = grid.length, m = grid[0].length;
         boolean[][] visited = new boolean[n][m];
 
@@ -84,14 +85,17 @@ public class M200NumberOfIslands {
 
     private static boolean isValid(char[][] grid, int x, int y, boolean[][] visited) {
         int n = grid.length, m = grid[0].length;
+        // check boundary
         if (x < 0 || x >= n || y < 0 || y >= m) {
             return false;
         }
 
+        // check visited
         if (visited[x][y]) {
             return false;
         }
 
+        // check land
         return grid[x][y] == LAND;
     }
 

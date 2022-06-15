@@ -47,9 +47,11 @@ public class H127WordLadder {
         }
         // convert wordList from list to set, so it has faster operation on contains(key)
         Set<String> dict = new HashSet<>(wordList);
+
         Queue<String> queue = new ArrayDeque<>();
         queue.offer(start);
 
+        // record visited word and its distance to root
         Map<String, Integer> distance = new HashMap<>();
         distance.put(start, 1);
 
@@ -76,20 +78,23 @@ public class H127WordLadder {
     private static List<String> getNextWords(String word, Set<String> dict) {
         List<String> words = new ArrayList<>();
         for(int i = 0; i < word.length(); i++) {
-            String left = word.substring(0, i);
-            String right = word.substring(i + 1);
             for(char ch = 'a'; ch <= 'z'; ch++) {
                 if (word.charAt(i) == ch) {
                     continue;
                 }
-
-                String nextWord = left + ch + right;
+                String nextWord = replace(word, i, ch);
                 if (dict.contains(nextWord)) {
                     words.add(nextWord);
                 }
             }
         }
         return words;
+    }
+
+    private static String replace(String str, int index, char ch) {
+        char[] chars = str.toCharArray();
+        chars[index] = ch;
+        return new String(chars);
     }
 
 }
