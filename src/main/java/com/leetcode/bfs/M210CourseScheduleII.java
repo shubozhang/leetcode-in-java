@@ -1,6 +1,11 @@
 package com.leetcode.bfs;
 
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an
  array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want
@@ -37,4 +42,59 @@ package com.leetcode.bfs;
  All the pairs [ai, bi] are distinct.
  * */
 public class M210CourseScheduleII {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        int takenCourses = 0;
+        int[] topoOrder = new int[numCourses];
+        // check if no prerequisites
+        if (prerequisites == null || prerequisites.length == 0) {
+            for (int i = 0; i < numCourses; i++) {
+                topoOrder[i] = i;
+            }
+            return topoOrder;
+        }
+
+        // graph a_pre ->(multiple) b
+        List[] graph = new ArrayList[numCourses];
+        for (int i = 0; i < numCourses; i++) {
+            graph[i] = new ArrayList<Integer>();
+        }
+
+        // 1. construct graph and record in degrees
+        // [node_in, node_out]
+        int[] inDegree = new int[numCourses];
+        for (int[] edge : prerequisites) {
+            graph[edge[1]].add(edge[0]);
+            inDegree[edge[0]]++;
+        }
+
+        // 2. add courses with inDegress == 0 to queue
+        Queue<Integer> queue = new ArrayDeque<>();
+        for (int i = 0; i < numCourses; i++) {
+            if (inDegree[i] == 0) {
+                queue.offer(i);
+            }
+        }
+
+        // 3. loop queue
+        while (!queue.isEmpty()) {
+            int curr = queue.poll();
+            topoOrder[takenCourses] = curr;
+            takenCourses++;
+            if (takenCourses == numCourses) { break;}
+            for (int i = 0; i < graph[curr].size(); i++) {
+                int course = (int)graph[curr].get(i);
+                inDegree[course]--;
+                if (inDegree[course] == 0) {
+                    queue.offer(course);
+                }
+            }
+        }
+
+        if (takenCourses == numCourses) {
+            return topoOrder;
+        }
+
+        return new int[0];
+
+    }
 }

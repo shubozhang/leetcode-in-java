@@ -69,3 +69,33 @@ N个点，M条边，图上BFS时间复杂度 = O(N + M)，说是O(M)问题也不
 * 求字典序最小的拓扑排序
 
 [Course Schedule II](/src/main/java/com/leetcode/bfs/M210CourseScheduleII.java)
+
+
+[Alien Dictionary](/src/main/java/com/leetcode/bfs/H269AlienDictionary.java)
+
+相关问题 Related Questions 
+* 图上的 BFS
+  * 判断一个图是否是一棵树
+  * http://www.lintcode.com/problem/graph-valid-tree/
+  * 搜索图中最近值为target的点
+  * http://www.lintcode.com/problem/search-graph-nodes/
+* 无向图连通块
+  * http://www.lintcode.com/problem/connected-component-in-undirected-graph/
+* 矩阵上的 BFS
+  * 僵尸多少天吃掉所有人
+  * http://www.lintcode.com/problem/zombie-in-matrix/
+  * 建邮局问题 Build Post Office II
+  * http://www.lintcode.com/problem/build-post-office-ii/
+
+
+## BFS总结
+*  能用 BFS 的一定不要用 DFS(除非面试官特别要求)
+* BFS 的三个使用场景 
+  * 连通块问题
+  * 层级遍历问题 
+  * 拓扑排序问题
+* 是否需要层级遍历 
+  * 需要多一重循环
+* 矩阵坐标变换数组 
+  * deltaX, deltaY
+  * 是否在界内:isInBound / isValid
