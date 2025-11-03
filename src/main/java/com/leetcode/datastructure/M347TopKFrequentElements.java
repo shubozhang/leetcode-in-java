@@ -10,12 +10,12 @@ import java.util.*;
 
  Example 1:
 
- Input: nums = [1,1,1,2,2,3], k = 2
- Output: [1,2]
+ Input: nums = [108,108,108,222,222,33], k = 2
+ Output: [108,222]
  Example 2:
 
- Input: nums = [1], k = 1
- Output: [1]
+ Input: nums = [55], k = 1
+ Output: [55]
 
 
  Constraints:
@@ -78,43 +78,54 @@ public class M347TopKFrequentElements {
         return res;
     }
 
-    // use bucket method
+    // Method 2: use bucket
     public int[] topKFrequentB(int[] nums, int k) {
+        // 1. Count frequency for each number
         // <number, frequency>
         Map<Integer, Integer> map = new HashMap<>();
-
-        // count frequency for each num
         for (int num : nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-
-        // create buckets for all possible num + 1, since there is no frequency
+    
+        // 2. Create buckets: index = frequency, value = list of numbers with that frequency
+        // The maximum possible frequency is nums.length
+        // Size is nums.length + 1 to account for 0-indexing up to frequency N
         List<Integer>[] buckets = new List[nums.length + 1];
         for (int i = 0; i < buckets.length; i++) {
             buckets[i] = new ArrayList<>();
         }
-
-        // bucket[frequency] = num
-        // num with same freq will be in the same bucket
+    
+        // 3. Populate buckets
+        // bucket[frequency] = num(s)
         for (int key: map.keySet()) {
-            buckets[map.get(key)].add(key);
+            int frequency = map.get(key);
+            buckets[frequency].add(key);
         }
-
-        // loop the freq in desc order
-        List<Integer> flattened = new ArrayList<>();
-        for (int i = buckets.length - 1; i >= 0; i--) {
-            if (buckets[i].size() == 0) { continue;}
-            if (flattened.size() >= k) { break;}
-
-            flattened.addAll(buckets[i]);
+    
+        // 4. Collect the top K elements
+        // Iterate from the highest possible frequency (buckets.length - 1) down to 1
+        List<Integer> result = new ArrayList<>();
+        
+        // We stop as soon as result.size() reaches k
+        for (int i = buckets.length - 1; i >= 0 && result.size() < k; i--) {
+            // Check if the current bucket (frequency) has any elements
+            if (buckets[i].size() > 0) {
+                // Add numbers from the current bucket until k is reached
+                for (int num : buckets[i]) {
+                    result.add(num);
+                    if (result.size() == k) {
+                        break; // Found all K elements, stop immediately
+                    }
+                }
+            }
         }
-
-        // return the k top freq
+    
+        // 5. Convert the List<Integer> result to the final int[] array
         int[] res = new int[k];
         for (int i = 0; i < k; i++) {
-            res[i] = flattened.get(i);
+            res[i] = result.get(i);
         }
-
+    
         return res;
     }
 
